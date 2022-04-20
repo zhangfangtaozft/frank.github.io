@@ -1,0 +1,1185 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #ffffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%230595bf' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e2e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e8e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #bababa;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #bababa;
+}
+
+.markdown-body table th {
+  background-color: #e8e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f8f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e2e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f8f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008327;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #c0c0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #c0c0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    pre, code, pre code {
+     overflow: visible !important;
+     white-space: pre-wrap !important;       /* css-3 */
+     white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap !important;      /* Opera 4-6 */
+     white-space: -o-pre-wrap !important;    /* Opera 7 */
+     word-wrap: break-word !important;       /* Internet Explorer 5.5+ */
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script><script>window.MathJax = {     tex: { tags: 'ams', inlineMath: [ ['$','$'], ['\\(','\\)'] ] },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9Affmpeg%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>第二章：FFMpeg基本信息</h1>
+<p>为了最优地使用各种FFmpeg组件，需要正确理解FFmpeg的基本属性和特性。如果你基础差了点，看了不知道说的啥，您可以继续下一章，并在遇到需要了解的内容的时候再回来看。<br />
+#FFmpeg介绍<br />
+FFmpeg是根据GNU通用公共许可证获得许可的多媒体处理自由软件项目的名称。 该项目最受欢迎的部分是用于视频和音频编码/解码的ffmpeg命令行工具，其主要特点是速度快，输出质量高和文件大小比较小。 FFmpeg中的“FF”表示 媒体播放器上的表示“快进”的控制按钮，“mpeg”是Moving Pictures Experts Group的缩写。 FFmpeg标志包含Z形图案，这是图片中以8x8块图示的熵编码方案的特征。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/661949-90a8463e8f2f3070.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="知道FFmpeg图标啥意思了吧" /></p>
+<p>FFmpeg命令行工具</p>
+<table>
+<thead>
+<tr>
+<th>ffmpeg</th>
+<th>快速音频和视频编码器/解码器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ffplay</td>
+<td>媒体播放器</td>
+</tr>
+<tr>
+<td>ffprobe</td>
+<td>显示媒体文件的特点</td>
+</tr>
+<tr>
+<td>ffserver</td>
+<td>使用HTTP和RTSP协议进行多媒体流的广播服务器</td>
+</tr>
+</tbody>
+</table>
+<p>FFmpeg软件库</p>
+<table>
+<thead>
+<tr>
+<th>libavcodec</th>
+<th>各种多媒体编解码器的软件库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>libavdevice</td>
+<td>软件库的设备</td>
+</tr>
+<tr>
+<td>libavfilter</td>
+<td>软件库包含过滤器</td>
+</tr>
+<tr>
+<td>libavformat</td>
+<td>媒体格式的软件库</td>
+</tr>
+<tr>
+<td>libavutil</td>
+<td>包含各种实用程序的软件库</td>
+</tr>
+<tr>
+<td>libpostproc</td>
+<td>用于后期处理的软件库</td>
+</tr>
+<tr>
+<td>libswresample</td>
+<td>用于音频重采样的软件库</td>
+</tr>
+<tr>
+<td>libswscale</td>
+<td>用于媒体扩展的软件库</td>
+</tr>
+<tr>
+<td>所有组件的编程语言是C语言，源代码可以在Linux/Unix、Windows、Mac OS X等系统上编译。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>本书是使用官方二进制版本在Microsoft Windows上创建的，但几乎所有的指令和示例都应该在其他操作系统上无任何更改的情况下运行。 有关启用的选项的详细信息，请参阅<a href="https://www.jianshu.com/p/c1d944033f77">词汇表</a>中的FFmpeg配置条目。</p>
+<h1><a id="ffmpeg%E5%BC%80%E5%8F%91%E8%80%85" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>FFmpeg开发者</h1>
+<p>该项目由Fabrice Bellard于2000年开始，Fabrice Bellard是QEMU和Tiny C Compiler的创建者，也是一位出色的程序员。 现在该项目由FFmpeg团队维护，开发人员来自许多国家，主要的开发人员可以参与合同工作：</p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th>地址</th>
+<th>专长</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Baptiste Coudurier</td>
+<td>美国.洛杉矶</td>
+<td>他在广播codecs (ProRes, DNxHD, IMX/D-10, AVC-Intra)，格式(MXF, GXF, MOV)和用法(Avid, FCP, Interlacing, Time Code, Metadata)中有专门的专业知识</td>
+</tr>
+<tr>
+<td>Benjamin Larsson</td>
+<td>斯德哥尔摩,瑞典</td>
+<td>他的专业领域是音频编解码器</td>
+</tr>
+<tr>
+<td>Diego Biurrun</td>
+<td>德国亚琛</td>
+<td>他在许可证法规遵循工程和构建系统方面具有特殊的专长</td>
+</tr>
+<tr>
+<td>Jason Garrett-Glaser</td>
+<td>洛杉矶.美国</td>
+<td>他是x264的主要开发人员，在H.264和其他现代有损视频格式以及x86 SIMD装配优化方面具有特殊的专业知识</td>
+</tr>
+<tr>
+<td>Luca Barbato</td>
+<td>意大利都灵</td>
+<td>他在流媒体协议方面有特殊专长</td>
+</tr>
+<tr>
+<td>Michael Niedermayer</td>
+<td>奥地利的维也纳</td>
+<td>他是视频编码和x86汇编领域的专家</td>
+</tr>
+<tr>
+<td>Stefano Sabatini</td>
+<td>卡利亚里.意大利</td>
+<td>他在libavfilter, ff工具的使用和可用性问题上有特别的专长</td>
+</tr>
+</tbody>
+</table>
+<h1><a id="%E5%8F%82%E4%B8%8Effmpeg%E5%BC%80%E5%8F%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>参与FFmpeg开发</h1>
+<p>任何人都可以通过在网页上加入特定的邮件列表来参与FFmpeg的开发和更新：<br />
+<a href="http://www.ffmpeg.org/contact.html">http://www.ffmpeg.org/contact.html</a><br />
+表中列出了可用的邮件列表：</p>
+<p>FFmpeg邮件列表</p>
+<table>
+<thead>
+<tr>
+<th>ffmpeg-user</th>
+<th>对于常见的用户问题，如编译问题、命令行问题和类似的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ffserver-user</td>
+<td>对于ffserver用户的问题，比如配置和流媒体问题</td>
+</tr>
+<tr>
+<td>libav-user</td>
+<td>对于应用程序开发人员有关使用FFmpeg库开发的问题</td>
+</tr>
+<tr>
+<td>ffmpeg-devel</td>
+<td>对于FFmpeg本身的开发，不是为了开发使用FFmpeg库的软件，也不是为了bug报告</td>
+</tr>
+<tr>
+<td>ffmpeg-cvslog</td>
+<td>对于FFmpeg源/主要git存储库的所有更改</td>
+</tr>
+<tr>
+<td>ffmpeg-trac</td>
+<td>对于FFmpeg Trac的所有修改</td>
+</tr>
+</tbody>
+</table>
+<h1><a id="ffmpeg%E4%B8%8B%E8%BD%BD" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>FFmpeg 下载</h1>
+<p>主要下载来源位于如下网页:<br />
+<a href="http://ffmpeg.org/download.html">http://ffmpeg.org/download.html</a><br />
+Windows的用户可以从如下网页下载二进制文件(推荐使用静态构建)：<br />
+<a href="http://ffmpeg.zeranoe.com/builds">http://ffmpeg.zeranoe.com/builds</a><br />
+许多Linux发行版已经安装了FFmpeg工具，否则它们可以被编译，这在OS X上也是可能的，或者OS X二进制文件可以从web页面下载：<br />
+<a href="http://www.evermeet.cx/ffmpeg">http://www.evermeet.cx/ffmpeg</a> or <a href="http://ffmpegmac.net">http://ffmpegmac.net</a><br />
+#命令行语法<br />
+ffmpeg命令行工具的语法相对简单，重要的是在正确的位置键入所需的参数，而不是在各种输入和输出之间混合选项。ffmpeg命令的一般结构如下，需要注意的是全局选项影响所有输入和输出:</p>
+<pre><code class="language-plain_text">ffmpeg [global options] [input file options] -i input_file [output file options] output_file
+</code></pre>
+<p><img src="https://upload-images.jianshu.io/upload_images/661949-35e9d23bd3442810.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="FFmpeg语法，大家能看懂不？看不懂的话看看Example，哪一部分是全局的设置选项，哪一部分是第一个视频的设置选项，所有的结构都是这种模式，看多了就可以了" /></p>
+<h1><a id="windows%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E5%8F%8A%E5%85%B6%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%B3%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows命令提示符及其替代方法</h1>
+<p>Windows上的ffmpeg命令行工具是通过命令提示符来管理的，可以通过Windows -&gt;所有程序-&gt;附件-&gt;命令提示。它也可以从一个快捷方式Win+R开始，然后键入cmd，然后输入。<br />
+<img src="https://upload-images.jianshu.io/upload_images/661949-2ec1ab88247c515c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /><br />
+Windows命令提示符在关闭时不会保存所使用的命令的历史，因为有一些具有额外特性的免费应用程序，如文件管理、编辑、宏、FTP客户端等，建议选择高级的FFmpeg工具程序。下一个表描述了几种免费的替代方案。</p>
+<p>Windows命令提示符选择</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>下载</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAR Manager</td>
+<td><a href="http://farmanager.com/">farmanager.com</a></td>
+<td>- 文件管理器与shell，编辑器，ftp客户端<br>- 命令行完成，快捷键，宏，插件<br>- 两个窗口，可定制的界面</td>
+</tr>
+<tr>
+<td>PyCmd</td>
+<td><a href="https://sourceforge.net/projects/pycmd/">sourceforge.net/projects/pycmd</a></td>
+<td>- 选项卡完成,持续的历史……</td>
+</tr>
+<tr>
+<td>Console</td>
+<td><a href="https://sourceforge.net/projects/console/">sourceforge.net/projects/console</a></td>
+<td>- 多个标签,可配置</td>
+</tr>
+<tr>
+<td>Gregs DOS Shell</td>
+<td><a href="http://gammadyne.com/cmdline.htm#gs">gammadyne.com/cmdline.htm#gs</a></td>
+<td>- 改进编辑，命令历史，支持Aero Glass等</td>
+</tr>
+<tr>
+<td>TCC/LE</td>
+<td><a href="https://jpsoft.com/">jpsoft.com/all- downloads/downloads.html</a></td>
+<td>- 包括111个内部命令，103个内部变量，140个变量函数</td>
+</tr>
+<tr>
+<td>接下来的行描述了最好的替代FAR管理器，在Linux上它可以用一个类似的应用程序Midnight Commander替代，如果安装了它，它将从控制台的mc命令启动。</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>FAR Manager是一个受欢迎的文件管理器、编辑器和FTP客户端，它支持宏、插件和其他高级特性。用户界面是高度可定制的，并被翻译成多种语言。下一幅图展示了它的命令历史窗口，它在输入新命令时显示，因此用户可以轻松地选择之前使用的命令并最终编辑它。<br />
+<img src="https://upload-images.jianshu.io/upload_images/661949-b5b7c73fe5cee39b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /><br />
+对于其高级文件编辑器，在创建ffmpeg批处理时，FAR Manager会很有用，这在<a href="https://www.jianshu.com/p/6d5758c4480d">批处理文件</a>章节中有介绍。 还需要文件编辑器来将媒体文件包含在网页中-<a href="https://www.jianshu.com/p/6a12dac2a0e3">“网络视频”</a>章节的主题。 界面的自定义开始于F9键并支持选择选项选项卡。</p>
+<h1><a id="%E8%B7%AF%E5%BE%84%E8%AE%BE%E7%BD%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>路径设置</h1>
+<p>将下载的FFmpeg命令行实用程序（ffmpeg.exe，ffplay.exe，ffprobe.exe）复制到环境变量Path部分中包含的目录是可以实现的，因此可以从任何目录调用它们而无需编写他们完整的路径。</p>
+<p>或者，您可以将FFmpeg程序复制到其他目录，例如C：\ media，然后通过控制面板 - &gt;系统和安全 - &gt;系统 - &gt;高级系统设置将此文件夹添加到系统路径。 请点击环境变量按钮，向下滚动系统变量的滚动条，点击路径，然后点击编辑按钮。 在弹出的窗口中单击编辑系统变量变量值字段，将光标移动到行尾，添加文本</p>
+<pre><code class="language-plain_text">;C:\media
+</code></pre>
+<p>点击OK按钮。分号分隔特定的目录，别复制。<br />
+<img src="https://upload-images.jianshu.io/upload_images/661949-2187b6260802d678.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /><br />
+对于命令提示符的当前会话，可以使用命令设置路径:</p>
+<pre><code class="language-plain_text">set path=%path%;C:\path_to_ffmpeg.exe
+</code></pre>
+<p>例如，如果文件ffmpeg.exe被复制到目录C:\media，命令是:</p>
+<pre><code class="language-plain_text">set path=%path%;C:\media
+</code></pre>
+<h1><a id="%E9%87%8D%E5%91%BD%E5%90%8D%E4%B8%BA%E7%BC%A9%E5%86%99%E5%BD%A2%E5%BC%8F%EF%BC%88%E6%87%92%E4%BA%BA%E4%B8%93%E5%8C%BA%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>重命名为缩写形式（懒人专区）</h1>
+<p>命令名称ffmpeg有6个字符，如果每次用的话都输入&quot;ffmpeg&quot;这六个字符就太麻烦了，想个简单的办法，建议将文件ffmpeg.exe重命名为f.exe（ffplay.exe至fp.exe等）或类似的简写形式以保存 时间并防止被误认。 在命令提示符中，你可以使用以下命令：</p>
+<pre><code class="language-plain_text">ren ffmpeg.exe f.exe
+</code></pre>
+<p>为了清晰起见，本书总是使用完整的命令形式ffmpeg。<br />
+#显示输出预览<br />
+在各种视频测试中，我们可以通过直接在屏幕上显示命令输出来节省大量时间，而不是将其保存到文件中，也不是在媒体播放器中预览。<br />
+##FFplay媒体播放器预览<br />
+使用简化的命令，而不是使用ffmpeg工具生成一个新文件。</p>
+<pre><code class="language-plain_text">ffmpeg -i input_file ... test_options ... output_file
+</code></pre>
+<p>我们可以使用将显示与ffmpeg完全相同的ffplay，使用该命令保存到文件中</p>
+<pre><code class="language-plain_text">ffplay -i input_file ... test_options
+</code></pre>
+<h2><a id="%E4%BD%BF%E7%94%A8sdl%E8%BE%93%E5%87%BA%E8%AE%BE%E5%A4%87%E9%A2%84%E8%A7%88%E3%80%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用SDL输出设备预览。</h2>
+<p>此预览由表中描述的SDL(简单的DirectMedia层)输出设备生成:</p>
+<p>输出设备：SDL</p>
+<table>
+<thead>
+<tr>
+<th>描述</th>
+<th>在SDL窗口中显示视频流，需要安装libsdl库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>语法</td>
+<td>[-icon_title i_title] [-window_size w_size] [-window_title w_title] -f sdl output</td>
+</tr>
+</tbody>
+</table>
+<p>描述设备的选择</p>
+<table>
+<thead>
+<tr>
+<th>icon_title</th>
+<th>名称为iconified SDL窗口，默认值为window_title值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>window_size</td>
+<td>SDL窗口大小，widthxheight或缩写，默认是输入视频的大小</td>
+</tr>
+<tr>
+<td>window_title</td>
+<td>窗口标题，默认为输出设备指定的文件名</td>
+</tr>
+<tr>
+<td>请注意，SDL设备只能显示具有yuv420p像素格式的输出，并且使用其他输入类型的选项-pix_fmt具有一个值yuv420p必须被预先处理，否则会显示一个错误，例如:</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-plain_text">ffmpeg -f lavfi -i rgbtestsrc -pix_fmt yuv420p -f sdl Example
+</code></pre>
+<p><img src="https://upload-images.jianshu.io/upload_images/661949-f0eb592341792a2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+<h1><a id="%E5%8F%AF%E4%BB%A5%E5%9C%A8ffmpeg%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%9A%84si%E5%89%8D%E7%BC%80" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>可以在FFmpeg中使用的SI前缀</h1>
+<p>当指定数值各种ffmpeg选项如比特率或最大文件大小可以使用常见的SI后缀:K:千(10^3),M为百万(10^6),G十亿(10^ 9),等下一个示例指定一个新的比特率1.5 mbps的输出文件,所有命令给相同的结果:</p>
+<pre><code class="language-plain_text">ffmpeg -i input.avi -b:v 1500000 output.mp4
+ffmpeg -i input.avi -b:v 1500K output.mp4
+ffmpeg -i input.avi -b:v 1.5M output.mp4
+ffmpeg -i input.avi -b:v 0.0015G output.mp4
+</code></pre>
+<p>请注意，在FFmpeg文档中，SI前缀被称为后缀，因为它们必须在数值之后立即输入。</p>
+<p>后缀B(字节)可以在ffmpeg选项中使用数值，并将数值乘以8。它可以与其他前缀相结合，以表示千字节(KB)、兆字节(MB)等。例如，为输出文件设置10兆字节的最大文件大小，可以使用下一个命令:</p>
+<pre><code class="language-plain_text">  ffmpeg -i input.mpg -fs 10MB output.mp4
+</code></pre>
+<p><img src="https://upload-images.jianshu.io/upload_images/661949-90ce385af44da737.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="这种嵌套的表格类型好像在简书上做不出来" /></p>
+<h1><a id="ffmpeg%E7%9A%84%E4%BB%A3%E7%A0%81%E8%BD%AC%E6%8D%A2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>FFmpeg的代码转换</h1>
+<p>ffmpeg程序读入内存中指定的任意数量的输入的内容，根据输入的参数或程序的默认值对其进行处理，并将结果写入任意数量的输出。输入和输出可以是计算机文件、管道、网络流、抓取设备等。</p>
+<p>在代码转换过程中，ffmpeg在libavformat库中调用demuxers来读取输入，并从数据包中获取编码数据。如果有更多的输入，ffmpeg可以通过跟踪任何活动输入流的最低时间戳来保持它们的同步。然后解码器从编码的数据包中生成未压缩的帧，在可选的过滤后，帧被发送到编码器。编码器产生新的编码包，它被发送到muxer并写入到输出。</p>
+<p>FFmpeg工具的重要部分是过滤器，它可以被组织成过滤链和filtergraphs。Filtergraphs可以是简单的或复杂的。在解码源和编码输出之间实现滤波处理。转码过程在下一个图中说明。<br />
+<img src="https://upload-images.jianshu.io/upload_images/661949-31e96fd03e426704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="FFmpeg的代码转换" /></p>
+<h1><a id="filters-filterchains%EF%BC%8Cfiltergraphs" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Filters, filterchains，filtergraphs</h1>
+<p>在多媒体处理中，术语过滤器是指在编码到输出之前修改输入的软件工具。过滤器分为音频和视频过滤器(请参阅词汇表中的过滤器)。FFmpeg内置了许多多媒体过滤器，可以通过多种方式组合它们。具有复杂语法的命令根据指定的参数从一个过滤器到另一个过滤器。这简化了媒体处理，因为有有损压缩的媒体流的多译码和编码会降低整体质量。FFmpeg的过滤API(应用程序编程接口)是libavfilter软件库，它允许过滤器有多个输入和输出。过滤器包括在输入和输出之间使用-vf选项的视频过滤器和-af选项音频过滤器。例如,下一个命令生成一个测试模式顺时针旋转90°使用转置过滤器(7中描述。章):</p>
+<pre><code class="language-plain_text"> ffplay -f lavfi -i testsrc -vf transpose=1
+</code></pre>
+<p>下一个示例使用atempo音频过滤器将输入音频的速度降低到80％：</p>
+<pre><code class="language-plain_text">ffmpeg -i input.mp3 -af atempo=0.8 output.mp3
+</code></pre>
+<p><img src="https://upload-images.jianshu.io/upload_images/661949-f191078c558aad9e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /><br />
+过滤器通常用于filterchains(逗号分隔的过滤器序列)和filtergraphs(分号分隔的filterchains序列)。如果使用了任何空格，那么filterchain必须用引号括起来。在filtergraphs中，可以使用表示所选filterchain输出的链接标签，并可以在以下的filtergraphs中使用。例如，我们希望将输入视频与hqdn3d过滤器输出的输出进行比较。如果没有filtergraphs，我们必须至少使用两个命令，例如:</p>
+<pre><code class="language-plain_text">ffmpeg -i input.mpg -vf hqdn3d,pad=2*iw output.mp4
+ffmpeg -i output.mp4 -i input.mpg -filter_complex overlay=w compare.mp4
+</code></pre>
+<p>使用带有链接标签的filtergraph，就只有一个命令:</p>
+<pre><code class="language-plain_text">ffplay -i i.mpg -vf split[a][b];[a]pad=2*iw[A];[b]hqdn3d[B];[A][B]overlay=w
+</code></pre>
+<p>分割过滤器将输入分为2个输出标签[a]和[b]，然后将[a]链接用作第二个filterchain的输入，它为标记[a]的比较创建了一个pad。[b]链接被用作第三个filterchain的输入，它创建一个标记为[b]的输出。最后一个filterchain使用[A]和[B]标签作为覆盖过滤器的输入，从而产生最终的比较。另一个例子是在下一个图中。<br />
+<img src="https://upload-images.jianshu.io/upload_images/661949-1881f192b6ec9f31.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+<h1><a id="%E9%80%89%E6%8B%A9%E7%9A%84%E5%AA%92%E4%BD%93%E6%B5%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>选择的媒体流</h1>
+<p>一些媒体容器如AVI、Matroska、MP4等可以包含多种类型的流，FFmpeg可以识别5种流类型:音频(a)、附件(t)、数据(d)、字幕(s)和视频(v)。</p>
+<p>使用-map选项选择流，然后使用流说明符和语法:</p>
+<pre><code class="language-plain_text">file_number:stream_type[:stream_number]
+</code></pre>
+<p>File_number和stream_number也表示为file_index和stream_index，从0开始计数，这意味着第一个是0，第二个是1，等等。</p>
+<ul>
+<li>-map 0选择所有类型的所有流。</li>
+<li>-map i:v从文件中选择所有的视频流，用i (index)， -map i:a选择所有的音频流，-map i:s选择所有字幕流，等等。</li>
+<li>特殊选项- - -vn， -sn分别排除所有音频、视频或字幕流。</li>
+</ul>
+<p>如果输入文件包含更多相同类型的流，而-map选项不被使用，那么选择的是每种类型的1个流。例如，如果文件包含2个视频流，选择的是具有较高分辨率的，对于音频选择的流有更多的通道，等等，细节如下图所示:<br />
+<img src="https://upload-images.jianshu.io/upload_images/661949-9895389cfdca97d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /><br />
+除了特定的-map选项，流指定符还与许多其他选项一起使用:</p>
+<p>流的形式说明符</p>
+<table>
+<thead>
+<tr>
+<th>说明符形式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stream_index</td>
+<td>选择该索引的流(编号)</td>
+</tr>
+<tr>
+<td>stream_type[:stream_index]</td>
+<td>stream_type为字母a(音频)、d(数据)、s(字幕)、t(附件)或v(视频);如果添加了stream_index，它将选择该类型的流并使用给定的索引，否则它将选择该类型的所有流</td>
+</tr>
+<tr>
+<td>p:program_id[:stream_index]</td>
+<td>如果添加了stream_index，那么使用给定的program_id在程序中选择带有stream_index的流，否则将选择该程序中的所有流</td>
+</tr>
+<tr>
+<td>stream_id</td>
+<td>按格式指定的ID选择流</td>
+</tr>
+<tr>
+<td>例如，为了设置音频和视频的使用-b选项的比特率，我们可以使用以下命令:</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-plain_text">ffmpeg -i input.mpg -b:a 128k -b:v 1500k output.mp4
+</code></pre>
+<h1><a id="lavfi%E8%99%9A%E6%8B%9F%E8%AE%BE%E5%A4%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lavfi虚拟设备</h1>
+<p>在前面的部分中，我们使用了一个带有lavfi值的-f选项，其中lavfi是在表中描述的libavfilter虚拟输入设备的名称:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>输入设备:lavfi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>描述</td>
+<td>从filtergraph的打开的输出pad中处理数据，对于每个输出垫创建一个对应的流，映射到编码。filtergraph由一个-graph选项指定，目前只支持视频输出垫</td>
+</tr>
+<tr>
+<td>语法</td>
+<td>-f lavfi [-graph[ -graph_file]]</td>
+</tr>
+<tr>
+<td></td>
+<td>lavfi选项的描述</td>
+</tr>
+<tr>
+<td>-graph</td>
+<td>作为输入的filtergraph，每个视频的开放输出必须用一个“outN”形式的唯一字符串标记，其中N是一个数字，从0开始，对应于设备生成的映射的输入流。第一个未标记的输出将自动分配给“out0”标签，但是其他所有的输出都需要显式指定。如果没有指定，则默认为输入设备指定的文件名</td>
+</tr>
+<tr>
+<td>-graph_file</td>
+<td>filtergraph的文件名被读取并发送到其他过滤器，filtergraph的语法与选项-graph指定的语法相同</td>
+</tr>
+</tbody>
+</table>
+<p>Lavfi通常用于显示测试模式，例如带有命令的SMPTE条:</p>
+<pre><code class="language-plain_text">ffplay -f lavfi -i smptebars
+</code></pre>
+<p>其他经常使用的源是可以用命令显示的颜色源:</p>
+<pre><code class="language-plain_text">ffplay -f lavfi -i color=c=blue
+</code></pre>
+<h1><a id="%E9%A2%9C%E8%89%B2%E5%90%8D%E7%A7%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>颜色名称</h1>
+<p>一些视频过滤器和源有一个颜色参数，需要指定需要的颜色，并且有4种颜色规范的方法(默认值为黑色):</p>
+<ul>
+<li>
+<p>1.颜色被指定为W3C(万维网联盟)标准名称，以其十六进制值按字母顺序排列的标准名称的列表如下图所示。请注意，这里有几个同义词:aqua = cyan, fuchsia = magenta和gray = grey。</p>
+</li>
+<li>
+<p>2.颜色被指定为十六进制数的形式0 xrrggbb @AA,RR红色通道,GG是绿色通道和BB是蓝色通道,例如0 x0000ff是蓝色的,0 xffff00是黄色的,等等。(@AA)是一个可选的alpha通道,指定有多少不透明的颜色,颜色在通道与一个@符号字符。Alpha通道值要么是从0x00到0xff的十六进制数字，要么是介于0.0和1.0之间的十进制数，其中0.0 (0x00)是完全透明的，1.0 (0xff)是完全不透明的。例如，半透明度的绿色是0x00ff00@0.5。</p>
+</li>
+<li>
+<p>3。和之前的方法一样,但表示十六进制数字系统使用#符号而不是0 x前缀,一样在HTML代码中,例如# ff0000是红色的,# ffffff是白色的,等等。请注意,#前缀不能使用alpha通道,这意味着# 0000 ff@0x34是好的,但没有# 0000 ff@ # 34。</p>
+</li>
+<li>
+<p>4.颜色是用一个特殊的值随机指定的，结果是由计算机产生的随机颜色。<br />
+<img src="https://upload-images.jianshu.io/upload_images/661949-3449c2b8840ca893.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+</li>
+</ul>
+<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: center"><a href="/FFMpeg-Basic/Chapter1.html">上一章</a></th>
+<th style="text-align: center"><a href="/FFMpeg-Basic/Chapter0.html">目录</a></th>
+<th style="text-align: center"><a href="/FFMpeg-Basic/Chapter3.html">下一章</a></th>
+</tr>
+</thead>
+</table>
+</div></body></html>
