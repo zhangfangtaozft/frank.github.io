@@ -767,7 +767,7 @@ body{ box-sizing: border-box;
 <h1><a id="%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>解决方案</h1>
 <h1><a id="%E6%8C%91%E6%88%981%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>挑战1的解决方案</h1>
 <p>解决未排序数组中第n个最小整数的方法有很多。例如，你可以选择本章所学的排序算法，对数组进行排序，然后抓取第n个索引处的元素。</p>
-<p>让我们来看看如何使用迷你堆获得第n个最小的元素!</p>
+<p>让我们来看看如何使用min堆获得第n个最小的元素!</p>
 <p><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAkACQAAD/4QB0RXhpZgAATU0AKgAAAAgABAEaAAUAAAAB
 AAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAACQ
 AAAAAQAAAJAAAAABAAKgAgAEAAAAAQAABTKgAwAEAAAAAQAAAcAAAAAA/+0AOFBo
@@ -3034,7 +3034,7 @@ ACiiigAooooAKKKKACiiigAooooAKQ9DS0h6GgD4F0X/AJA2k/8AXtF/6AK06zNF
 <p>我们来看看这个解决方案。</p>
 <ol>
 <li>
-<p>用未排序的数组初始化一个迷你堆。</p>
+<p>用未排序的数组初始化一个min堆。</p>
 </li>
 <li>
 <p>current跟踪第n个最小的元素。</p>
@@ -15883,7 +15883,7 @@ J/8A4ij/AIW98Of+hoh/J/8A4igD0mivNv8Ahb3w5/6GiH8n/wDiKP8Ahb3w5/6G
 iH8n/wDiKAP/2Q==" alt="" /></p>
 <ol>
 <li>
-<p>如果数组是空的，那么它就是一个迷你堆!</p>
+<p>如果数组是空的，那么它就是一个mini堆!</p>
 </li>
 <li>
 <p>以相反的顺序遍历数组中的所有父节点。</p>
