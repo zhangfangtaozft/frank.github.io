@@ -1,0 +1,916 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #ffffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%230595bf' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e2e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e8e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #bababa;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #bababa;
+}
+
+.markdown-body table th {
+  background-color: #e8e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f8f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e2e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f8f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008327;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #c0c0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #c0c0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    code,pre,pre code{
+        overflow: visible; word-wrap: break-word !important;
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script><script>window.MathJax = {     tex: { tags: 'ams' },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="%E9%80%82%E7%94%A8%E4%BA%8Eios%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%A0%B8%E5%BF%83%E8%93%9D%E7%89%99%E5%90%8E%E5%8F%B0%E5%A4%84%E7%90%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>适用于iOS应用程序的核心蓝牙后台处理</h1>
+<p>对于iOS应用，了解应用是在前台还是在后台运行至关重要。应用在后台的行为必须与在前台的行为不同，因为iOS设备上的系统资源受到更多限制。有关iOS上后台操作的总体讨论，请参阅iOS版应用编程指南中的后台执行。</p>
+<p>默认情况下，当应用处于后台或挂起状态时，中央和外围的许多常见核心蓝牙任务都会被禁用。也就是说，你可以声明你的应用支持核心蓝牙后台执行模式，以允许你的应用从挂起状态唤醒，以处理某些与蓝牙相关的事件。即使你的应用不需要全方位的后台处理支持，它仍然可以在发生重要事件时请求系统发出警报。</p>
+<p>即使你的应用支持一种或两种核心蓝牙后台执行模式，它也不能永远运行。在某些时候，系统可能需要终止我们的应用程序，以便为当前前台应用程序释放内存，例如，导致任何活动或挂起的连接丢失。从iOS7 开始，酷睿蓝牙支持保存中央和外围管理器对象的状态信息，并在应用启动时恢复该状态。我们可以使用此功能来支持涉及蓝牙设备的长期操作。</p>
+<h1><a id="%E4%BB%85%E9%99%90%E5%89%8D%E5%8F%B0%E7%9A%84%E5%BA%94%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>仅限前台的应用</h1>
+<p>与大多数iOS应用一样，除非你请求执行特定后台任务的权限，否则你的应用会在进入后台状态后不久转换为挂起状态。处于挂起状态时，你的应用无法执行与蓝牙相关的任务，也无法识别任何与蓝牙相关的事件，直到它恢复到前台。</p>
+<p>在中央侧，仅前台应用（尚未声明支持任一核心蓝牙后台执行模式的应用）无法在后台或挂起时扫描和发现广播外围设备。在外围设备端，广播被禁用，任何尝试访问应用已发布服务之一的动态特征值的中心都会收到错误。</p>
+<p>根据用例，此默认行为可能会以多种方式影响我们的应用。例如，假设我们正在与当前连接到的外围设备上的数据进行交互。现在假设你的应用移动到挂起状态（例如，因为用户切换到另一个应用）。如果在应用挂起时与外围设备的连接丢失，则在应用恢复到前台之前，你不会意识到发生了任何断开连接。</p>
+<h2><a id="%E5%88%A9%E7%94%A8%E5%A4%96%E8%AE%BE%E8%BF%9E%E6%8E%A5%E9%80%89%E9%A1%B9" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>利用外设连接选项</h2>
+<p>仅前台应用处于挂起状态时发生的所有蓝牙相关事件都由系统排队，并且仅在应用恢复到前台时传递到应用。也就是说，核心蓝牙提供了一种在发生某些中心角色事件时提醒用户的方法。然后，用户可以使用这些警报来确定特定事件是否值得将应用恢复到前台。</p>
+<p>通过在调用连接外围设备时包括以下外围设备连接选项之一，可以利用这些警报： CBCentralManager 类连接到远程外围设备的方法：</p>
+<ul>
+<li>
+<p>CBConnectPeripheralOptionNotifyOnConnectionKey- 如果我们希望系统在成功连接后应用程序挂起时显示给定外围设备的警报，请包括此密钥。</p>
+</li>
+<li>
+<p>CBConnectPeripheralOptionNotifyOnDisconnectionKey - 如果我们希望系统在断开连接时应用程序挂起时显示给定外围设备的断开连接警报，请包含此密钥。</p>
+</li>
+<li>
+<p>CBConnectPeripheralOptionNotifyOnNotificationKey - 如果我们希望系统在应用程序当时挂起时显示从给定外围设备收到的所有通知的警报，请包括此键。</p>
+</li>
+</ul>
+<p>有关外围设备连接选项的详细信息，请参阅 CBCentralManager 类参考中详细介绍的外围设备连接选项常量。</p>
+<h1><a id="%E6%A0%B8%E5%BF%83%E8%93%9D%E7%89%99%E5%90%8E%E5%8F%B0%E6%89%A7%E8%A1%8C%E6%A8%A1%E5%BC%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>核心蓝牙后台执行模式</h1>
+<p>如果你的应用需要在后台运行才能执行某些与蓝牙相关的任务，则必须在其信息属性列表 （Info.plist） 文件中声明它支持核心蓝牙后台执行模式。当你的应用声明这一点时，系统会将其从挂起状态唤醒，以允许它处理与蓝牙相关的事件。此支持对于与定期提供数据的低功耗蓝牙设备（如心率监视器）交互的应用非常重要。</p>
+<p>应用可以声明两种核心蓝牙后台执行模式，一种用于实现中心角色的应用，另一种用于实现外围角色的应用。如果你的应用实现了这两个角色，它可能会声明它支持这两种后台执行模式。核心蓝牙后台执行模式是通过将 UIBackgroundModes 键添加到 Info.plist 文件并将键的值设置为包含以下字符串之一的数组来声明的：</p>
+<ul>
+<li>bluetooth-central—应用程序使用核心蓝牙框架与低功耗蓝牙外围设备通信。</li>
+<li>bluetooth-peripheral - 应用程序使用核心蓝牙框架共享数据。</li>
+</ul>
+<blockquote>
+<p>注意：默认情况下，Xcode 中的属性列表编辑器显示许多键的人类可读字符串，而不是实际的键名称。若要显示 Info.plist 文件中的实际键名称，请按住 Control 键点按编辑器窗口中的任意键，然后在上下文窗口中启用“显示原始键/值”项。</p>
+</blockquote>
+<h1><a id="%E8%93%9D%E7%89%99%E4%B8%AD%E5%A4%AE%E5%90%8E%E5%8F%B0%E6%89%A7%E8%A1%8C%E6%A8%A1%E5%BC%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>蓝牙中央后台执行模式</h1>
+<p>当实现中心角色的应用在其 Info.plist 文件中包含具有蓝牙中心值的 UIBackgroundModes 键时，核心蓝牙框架允许应用在后台运行以执行某些与蓝牙相关的任务。当应用在后台运行时，你仍然可以发现并连接到外围设备，以及浏览外围设备并与之交互。此外，当调用任何 CBCentralManagerDelegate 或 CBPeripheralDelegate 方法时，系统会唤醒你的应用，从而允许你的应用处理重要的中心角色事件，例如当连接建立或断开时、外围设备发送更新的特征值时，以及当中心管理器的状态发生更改时。</p>
+<p>尽管你可以在应用处于后台时执行许多与蓝牙相关的任务，但请记住，当应用在后台时扫描外围设备与应用在前台时扫描外围设备的操作不同。特别是，当应用在后台扫描设备时：</p>
+<ul>
+<li>
+<p>CBCentralManagerScanOptionAllowDuplicatesKey 扫描选项键将被忽略，广播外设的多个发现将合并为单个发现事件。</p>
+</li>
+<li>
+<p>如果正在扫描外围设备的所有应用都在后台运行，则中央设备扫描广播数据包的间隔会增加。因此，发现广播外围设备可能需要更长的时间。<br />
+这些更改有助于最大程度地减少无线电使用量并延长iOS设备的电池续航时间。</p>
+</li>
+</ul>
+<h2><a id="%E8%93%9D%E7%89%99%E5%A4%96%E8%AE%BE%E5%90%8E%E5%8F%B0%E6%89%A7%E8%A1%8C%E6%A8%A1%E5%BC%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>蓝牙外设后台执行模式</h2>
+<p>若要在后台执行某些外围角色任务，必须在应用的 Info.plist 文件中包含具有蓝牙外围设备值的 UIBackgroundModes（用户界面）键。当此键值对包含在应用的 Info.plist 文件中时，系统会唤醒我们的应用以处理读取、写入和订阅事件。</p>
+<p>除了允许唤醒应用以处理来自连接的中心的读取、写入和订阅请求外，核心蓝牙框架还允许应用在后台状态下进行播发。也就是说，我们应该知道，应用在后台运行时的广播与应用在前台时的操作方式不同。特别是，当我们的应用在后台投放广播时：</p>
+<ul>
+<li>
+<p>CBAdvertisementDataLocalNameKey 通告键将被忽略，并且不会通告外围设备的本地名称。</p>
+</li>
+<li>
+<p>CBAdvertisementDataServiceUUIDsKey 通告密钥值中包含的所有服务 UUID 都放置在特殊的“溢出”区域中;它们只能由显式扫描它们的iOS设备发现。</p>
+</li>
+<li>
+<p>如果所有正在投放广播的应用都在后台进行，则外围设备发送广播数据包的频率可能会降低。</p>
+</li>
+</ul>
+<h2><a id="%E6%99%BA%E8%83%BD%E5%9C%B0%E4%BD%BF%E7%94%A8%E5%90%8E%E5%8F%B0%E6%89%A7%E8%A1%8C%E6%A8%A1%E5%BC%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>智能地使用后台执行模式</h2>
+<p>尽管声明应用支持一种或两种核心蓝牙后台执行模式对于满足特定用例可能是必需的，但应始终负责任地执行后台处理。由于执行许多与蓝牙相关的任务需要主动使用iOS设备的板载无线电，反过来，无线电的使用会对iOS设备的电池寿命产生不利影响，因此请尽量减少在后台执行的工作量。唤醒任何蓝牙相关事件的应用应尽快处理它们并返回，以便应用可以再次挂起。</p>
+<p>声明支持任一核心蓝牙后台执行模式的任何应用都必须遵循一些基本准则：</p>
+<ul>
+<li>
+<p>应用应基于会话，并提供一个界面，允许用户决定何时开始和停止传递与蓝牙相关的事件。</p>
+</li>
+<li>
+<p>唤醒后，应用程序有大约 10 秒的时间来完成任务。理想情况下，它应该尽快完成任务，并允许自己再次暂停。花费太多时间在后台执行的应用可能会被系统限制或终止。</p>
+</li>
+<li>
+<p>应用不应利用唤醒作为执行无关任务的机会，这些任务与系统唤醒应用的原因无关。</p>
+</li>
+</ul>
+<h1><a id="%E5%9C%A8%E5%90%8E%E5%8F%B0%E6%89%A7%E8%A1%8C%E9%95%BF%E6%9C%9F%E6%93%8D%E4%BD%9C" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>在后台执行长期操作</h1>
+<p>某些应用可能需要使用核心蓝牙框架在后台执行长期操作。例如，假设我们正在为与门锁（配备蓝牙低功耗技术）通信的iOS设备开发家庭安全应用程序。应用和锁交互，在用户离开家时自动锁门，在用户返回时解锁门 - 所有这些都是在应用处于后台时进行的。当用户离开家时，iOS 设备最终可能会超出锁的范围，从而导致与锁的连接丢失。此时，应用可以简单地调用 CBCentralManager 类的 connectPeripheral：options： 方法，并且由于连接请求不会超时，因此当用户返回主页时，iOS 设备将重新连接。</p>
+<p>现在假设用户离家几天。如果用户不在时系统终止应用，则当用户返回家时，应用将无法重新连接到锁，并且用户可能无法解锁门。对于此类应用程序，能够继续使用Core Blue执行长期操作（例如监视活动和挂起的连接）至关重要。</p>
+<h2><a id="%E7%8A%B6%E6%80%81%E4%BF%9D%E6%8A%A4%E5%92%8C%E6%81%A2%E5%A4%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>状态保护和恢复</h2>
+<p>由于状态保留和还原内置于 Core Bluetooth，因此你的应用可以选择启用此功能，要求系统保留应用的中央和外围管理器的状态，并继续代表它们执行某些与蓝牙相关的任务，即使你的应用不再运行也是如此。当其中一个任务完成时，系统会在后台重新启动你的应用，并使你的应用有机会还原其状态并适当地处理事件。对于上述家庭安全应用程序，系统将监视连接请求，并重新启动应用程序以处理 centralManager：didConnectPeripheral：当用户返回主页并完成连接请求时委托回调。</p>
+<p>核心蓝牙支持实现中心角色和/或外围角色的应用的状态保留和还原。当应用实现中心角色并添加对状态保留和还原的支持时，系统会在系统即将终止应用以释放内存时保存中央管理器对象的状态（如果应用有多个中央管理器，则可以选择希望系统跟踪哪些中央管理器）。特别是，对于给定的 CBCentralManager 对象，系统会跟踪：</p>
+<ul>
+<li>
+<p>中央管理器正在扫描的服务（以及扫描开始时指定的任何扫描选项）</p>
+</li>
+<li>
+<p>中央管理器尝试连接或已经连接的外围设备</p>
+</li>
+<li>
+<p>中央管理器订阅的特征</p>
+</li>
+</ul>
+<p>实现外围角色的应用同样可以利用状态保留和还原。对于 CBPeripheralManager 对象，系统会跟踪：</p>
+<ul>
+<li>
+<p>外围管理器播发的数据</p>
+</li>
+<li>
+<p>外围管理器发布到设备数据库的服务和特征</p>
+</li>
+<li>
+<p>订阅我们的特征值的中心</p>
+</li>
+</ul>
+<p>当系统将应用重新启动到后台时（例如，因为发现了应用正在扫描的外设），我们可以重新实例化应用的中央管理器和外围管理器并还原其状态。以下部分详细介绍了如何在应用中利用状态保留和还原。</p>
+<h2><a id="%E6%B7%BB%E5%8A%A0%E5%AF%B9%E7%8A%B6%E6%80%81%E4%BF%9D%E5%AD%98%E5%92%8C%E6%81%A2%E5%A4%8D%E7%9A%84%E6%94%AF%E6%8C%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>添加对状态保存和恢复的支持</h2>
+<p>核心蓝牙中的状态保留和还原是一项可选功能，需要应用的帮助才能正常工作。我们可以按照以下过程在应用中添加对此功能的支持：</p>
+<ol>
+<li>(Required) 在分配和初始化中央管理器或外围管理器对象时选择加入状态保留和恢复。选择加入状态保护和还原中介绍了此步骤。</li>
+<li>(Required) 在系统重新启动应用后，重新实例化任何中央或外围管理器对象。重新实例化中央管理器和外围管理器中介绍了此步骤。</li>
+<li>(Required）实现适当的还原委托方法。实现适当的还原委托方法中介绍了此步骤。</li>
+<li>(Optional) 更新中央和外围管理器的初始化过程。更新初始化过程中介绍了此步骤。</li>
+</ol>
+<h2><a id="%E9%80%89%E6%8B%A9%E5%8A%A0%E5%85%A5%E7%8A%B6%E6%80%81%E4%BF%9D%E6%8A%A4%E5%92%8C%E6%81%A2%E5%A4%8D" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>选择加入状态保护和恢复</h2>
+<p>要选择启用状态保留和恢复功能，只需在分配和初始化中央管理器或外围管理器时提供唯一的恢复标识符。还原标识符是一个字符串，用于标识核心蓝牙和应用的中央或外围管理器。字符串的值仅对代码有效，但此字符串的存在告诉 Core Bluetooth 它需要保留标记对象的状态。核心蓝牙仅保留具有还原标识符的对象的状态。</p>
+<p>例如，若要在仅使用 CBCentralManager 对象的一个实例来实现中心角色的应用中选择状态保留和还原，请指定 CBCentralManagerOptionRestoreIdentifierKey 初始化选项，并在分配和初始化中心管理器时为其提供还原标识符。</p>
+<pre><code class="language-plain_text">myCentralManager =
+        [[CBCentralManager alloc] initWithDelegate:self queue:nil
+         options:@{ CBCentralManagerOptionRestoreIdentifierKey:
+         @&quot;myCentralManagerIdentifier&quot; }];
+</code></pre>
+<p>尽管上面的示例没有演示这一点，但我们可以选择在以类似方式使用外围管理器对象的应用中加入状态保留和还原：指定 CBPeripheralManagerOptionRestoreIdentifierKey 初始化选项，并在分配和初始化每个外围管理器对象时提供还原标识符。</p>
+<blockquote>
+<p>注意：由于应用程序可以具有CBCentralManager和CBPeripheralManager对象的多个实例，因此请确保每个还原标识符都是唯一的，以便系统可以正确区分一个中央（或外围设备）管理器对象与另一个。</p>
+</blockquote>
+<h2><a id="%E9%87%8D%E6%96%B0%E5%AE%9E%E4%BE%8B%E5%8C%96%E4%B8%AD%E5%A4%AE%E5%92%8C%E5%A4%96%E5%9B%B4%E7%AE%A1%E7%90%86%E5%99%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>重新实例化中央和外围管理器</h2>
+<p>当系统将应用重新启动到后台时，我们需要做的第一件事是使用与首次创建时相同的还原标识符重新实例化相应的中央管理器和外围管理器。如果你的应用仅使用一个中央管理器或外围管理器，并且该管理器在应用的生存期内存在，则无需执行此步骤的其他操作。</p>
+<p>如果你的应用使用多个中央管理器或外围管理器，或者它使用的管理器在应用的生存期内不存在，则你的应用需要知道在系统重新启动时要重新实例化哪些管理器。在实现应用程序委托的应用程序：didFinishLaunchingWithOptions： 方法时，可以使用相应的启动选项键（UIApplicationLaunchOptionsBluetoothCentralsKey 或 UIApplicationLaunchOptionsBluetoothPeripheralsKey）访问系统在应用程序终止时为应用程序保留的管理器对象的所有还原标识符的列表。</p>
+<p>例如，当系统重新启动应用时，可以检索系统为应用保留的中央管理器对象的所有还原标识符，如下所示：</p>
+<pre><code class="language-plain_text">- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ 
+    NSArray *centralManagerIdentifiers =
+        launchOptions[UIApplicationLaunchOptionsBluetoothCentralsKey];
+    ...
+</code></pre>
+<p>获得还原标识符列表后，只需遍历它并重新实例化相应的中央管理器对象即可。</p>
+<blockquote>
+<p>注意：重新启动应用时，系统仅为正在执行某些蓝牙相关任务（当应用不再运行时）的中央和外围管理器提供恢复标识符。UIApplicationDelegate Protocol 参考中更详细地描述了这些启动选项键。</p>
+</blockquote>
+<h2><a id="%E5%AE%9E%E7%8E%B0%E9%80%82%E5%BD%93%E7%9A%84%E8%BF%98%E5%8E%9F%E5%A7%94%E6%89%98%E6%96%B9%E6%B3%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>实现适当的还原委托方法</h2>
+<p>在应用中重新实例化相应的中央和外围管理器后，通过将其状态与蓝牙系统的状态同步来还原它们。若要使应用跟上系统代表它执行的操作（在系统未运行时），必须实现相应的还原委托方法。对于中央管理器，实现 centralManager：willRestoreState： delegate 方法;对于外围管理器，实现外围管理器：将恢复状态：委托方法。</p>
+<blockquote>
+<p>重要提示：对于选择加入核心蓝牙的状态保留和恢复功能的应用，以下是第一种方法（centralManager：willRestoreState： and peripheralManager：willRestoreState：）在后台重新启动应用以完成某些与蓝牙相关的任务时调用。对于未选择加入状态保留的应用（或者在启动时没有要还原的内容），将首先调用 centralManagerDidUpdateState： 和外围设备管理器DidUpdateState： 委托方法。</p>
+</blockquote>
+<p>在上述两种委托方法中，最后一个参数是一个字典，其中包含有关终止应用时保留的管理器的信息。有关可用字典键的列表，请参阅 CBCentralManagerDelegate Protocol Reference 中的 Central Manager 状态还原选项常量和 CBPeripheralManagerDelegate Protocol Reference 中的 Peripheral_Manager_State_Restoration_Options 常量。</p>
+<p>若要还原 CBCentralManager 对象的状态，请使用 centralManager：willRestoreState： delegate 方法中提供的字典的键。例如，如果中央管理器对象在应用终止时有任何活动或挂起的连接，则系统会继续代表应用监视这些连接。如下所示，我们可以使用 CBCentralManagerRerestoreStatePeripheralsKey 字典键来获取中央管理器连接到或尝试连接的所有外围设备（由 CBPeripheral 对象表示）的列表：</p>
+<pre><code class="language-plain_text">- (void)centralManager:(CBCentralManager *)central
+      willRestoreState:(NSDictionary *)state {
+ 
+    NSArray *peripherals =
+        state[CBCentralManagerRestoredStatePeripheralsKey];
+    ...
+</code></pre>
+<p>在上面示例中，如何处理已恢复的外围设备列表取决于用例。例如，如果我们的应用保留了中央管理器发现的外围设备的列表，则我们可能希望将还原的外围设备添加到该列表中以保留对它们的引用。如发现外围设备后连接到外围设备中所述，请务必设置外围设备的委托，以确保它收到适当的回调。</p>
+<p>可以使用外围管理器：willRestoreState： delegate 方法中提供的字典键，以类似的方式还原 CBPeripheralManager 对象的状态。</p>
+<h2><a id="%E6%9B%B4%E6%96%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>更新初始化过程</h2>
+<p>实现前三个必需步骤后，我们可能需要查看更新中央管理器和外围管理器的初始化过程。尽管这是一个可选步骤，但它对于确保应用中的内容顺利运行非常重要。例如，你的应用可能在浏览连接的外围设备的数据时被终止。当你的应用使用此外围设备还原时，它不会知道它在终止时使发现过程走了多远。我们需要确保从发现过程中中断的地方开始。</p>
+<p>例如，在 centralManagerDidUpdateState： delegate 方法中初始化应用时，可以了解是否成功发现了已还原外围设备的特定服务（在应用终止之前），如下所示：</p>
+<pre><code class="language-plain_text">NSUInteger serviceUUIDIndex =
+        [peripheral.services indexOfObjectPassingTest:^BOOL(CBService *obj,
+        NSUInteger index, BOOL *stop) {
+            return [obj.UUID isEqual:myServiceUUIDString];
+        }];
+ 
+    if (serviceUUIDIndex == NSNotFound) {
+        [peripheral discoverServices:@[myServiceUUIDString]];
+        ...
+</code></pre>
+<p>如上例所示，如果系统在完成发现服务之前终止了应用，则通过调用 discoverServices： 开始浏览还原的外围设备的数据。如果我们的应用成功发现了该服务，则可以检查是否发现了适当的特征（以及我们是否已订阅这些特征）。通过以这种方式更新初始化过程，可以确保在正确的时间调用正确的方法。</p>
+</div></body></html>
