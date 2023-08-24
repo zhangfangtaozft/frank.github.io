@@ -1,0 +1,794 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #ffffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%230595bf' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e2e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e8e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #bababa;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #bababa;
+}
+
+.markdown-body table th {
+  background-color: #e8e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f8f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e2e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f8f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008327;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #c0c0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #c0c0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    code,pre,pre code{
+        overflow: visible; word-wrap: break-word !important;
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script>window.MathJax = {     tex: { tags: 'ams' },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="core-bluetooth%E6%A6%82%E8%BF%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Core Bluetooth 概述</h1>
+<p>Core Bluetooth框架可让我们的 iOS 和 Mac 应用与低功耗蓝牙设备进行通信。例如，你的应用可以发现、探索低能耗外围设备（如心率监测器、数字恒温器，甚至其他 iOS 设备）并与之交互。</p>
+<p>该框架是蓝牙 4.0 规范的抽象，用于低功耗设备。也就是说，它对我们（开发人员）隐藏了规范的许多底层细节，使我们可以更轻松地开发与低功耗蓝牙设备交互的应用程序。由于该框架基于规范，因此采用了规范中的一些概念和术语。本章向我们介绍开始使用Core Bluetooth框架开发出色应用时需要了解的关键术语和概念。</p>
+<blockquote>
+<p>重要提示：在 iOS 10.0 上或之后链接的 iOS 应用必须在其 Info.plist 文件中包含它需要访问的数据类型的使用说明键，否则它将崩溃。要专门访问蓝牙外设数据，它必须包括 NSBluetooth外围设备使用说明。</p>
+</blockquote>
+<h2><a id="%E4%B8%AD%E5%A4%AE%E5%92%8C%E5%A4%96%E5%9B%B4%E8%AE%BE%E5%A4%87%E5%8F%8A%E5%85%B6%E5%9C%A8%E8%93%9D%E7%89%99%E9%80%9A%E4%BF%A1%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>中央和外围设备及其在蓝牙通信中的作用</h2>
+<p>所有低功耗蓝牙通信都涉及两个主要参与者：中央和外围设备。基于某种传统的客户端-服务器体系结构，外围设备通常具有其他设备所需的数据。中央通常使用外围设备提供的信息来完成某些特定任务。例如，如图 1-1 所示，心率监测器可能包含我们的 Mac 或 iOS 应用程序可能需要的有用信息，以便以用户友好的方式显示用户的心率。</p>
+<p>图1-1 中央及外围设备</p>
+<div align="center"> <img src="https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/Art/CBDevices1_2x.png"/> </div>
+<h2><a id="%E4%B8%AD%E5%A4%AE%E5%8F%91%E7%8E%B0%E5%B9%B6%E8%BF%9E%E6%8E%A5%E5%88%B0%E6%AD%A3%E5%9C%A8%E5%81%9A%E6%8E%A8%E5%B9%BF%E7%9A%84%E5%A4%96%E5%9B%B4%E8%AE%BE%E5%A4%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>中央发现并连接到正在做推广的外围设备</h2>
+<p>外围设备以广播包的形式广播它们拥有的一些数据。广播数据包是一个相对较小的数据包，可能包含有关外设必须提供的内容的有用信息，例如外设的名称和主要功能。例如，数字恒温器可能会宣传它提供房间的当前温度。在低功耗蓝牙中，广播是外围设备宣传其存在的主要方式。</p>
+<p>另一方面，中心可以扫描和侦听任何外围设备，这些外围设备正在宣传它感兴趣的信息，如图 1-2 所示。中心可以要求连接到它发现广播的任何外围设备。</p>
+<p>图1-2 广播和发现</p>
+<div align="center"> <img src="https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/Art/AdvertisingAndDiscovery_2x.png"/> </div>
+<h2><a id="%E5%A4%96%E8%AE%BE%E7%9A%84%E6%95%B0%E6%8D%AE%E6%98%AF%E5%A6%82%E4%BD%95%E6%9E%84%E5%BB%BA%E7%9A%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>外设的数据是如何构建的</h2>
+<p>连接到外围设备的目的是开始探索它必须提供的数据并与之交互。但是，在执行此操作之前，了解外围设备的数据的结构方式会有所帮助。</p>
+<p>外设可能包含一个或多个服务，或提供有关其连接信号强度的有用信息。服务是用于完成设备（或该设备的某些部分）的功能或特性的数据和相关行为的集合。例如，心率监测器的一项服务可能是从监测器的心率传感器公开心率数据。</p>
+<p>服务本身由特征或包含的服务（即对其他服务的引用）组成。特征提供有关外围设备服务的更多详细信息。例如，刚才描述的心率服务可能包含一个描述设备心率传感器预期身体位置的特征和另一个传输心率测量数据的特征。图 1-3 说明了心率监测器服务和特性的一种可能结构。</p>
+<div align="center"> <img src="https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/Art/CBPeripheralData_Example_2x.png"/> </div>
+<h2><a id="%E4%B8%AD%E5%BF%83%E5%9C%A8%E5%A4%96%E5%9B%B4%E8%AE%BE%E5%A4%87%E4%B8%8A%E6%8E%A2%E7%B4%A2%E6%95%B0%E6%8D%AE%E5%B9%B6%E4%B8%8E%E4%B9%8B%E4%BA%A4%E4%BA%92" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>中心在外围设备上探索数据并与之交互</h2>
+<p>在中心成功建立与外围设备的连接后，它可以发现外围设备必须提供的全部服务和特征（广播数据可能只包含可用服务的一小部分）。</p>
+<p>中心还可以通过读取或写入外围设备特征的值来与外围设备的服务进行交互。例如，你的应用可能会从数字恒温器请求当前室温，或者它可以为恒温器提供一个值来设置室温。</p>
+<h1><a id="%E5%A6%82%E4%BD%95%E8%A1%A8%E7%A4%BA%E4%B8%AD%E5%BF%83%E3%80%81%E5%A4%96%E8%AE%BE%E5%92%8C%E5%A4%96%E5%9B%B4%E6%95%B0%E6%8D%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>如何表示中心、外设和外围数据</h1>
+<p>低功耗蓝牙通信中涉及的主要参与者和数据以简单、直接的方式映射到酷睿蓝牙框架上。</p>
+<h2><a id="%E4%B8%AD%E5%A4%AE%E4%BE%A7%E7%9A%84%E7%89%A9%E4%BD%93" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>中央侧的物体</h2>
+<p>当我们使用本地中心与远程外设交互时，我们将在蓝牙低功耗通信的中央端执行操作。除非我们设置本地外围设备并使用它来响应中心的请求，否则我们的大部分蓝牙交易都将在中央端进行。</p>
+<p>有关如何在应用中实现中心角色的信息，请参阅执行常见的中心角色任务和与远程外围设备交互的最佳做法</p>
+<h3><a id="%E6%9C%AC%E5%9C%B0%E4%B8%AD%E5%BF%83%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%A4%96%E5%9B%B4%E8%AE%BE%E5%A4%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>本地中心和远程外围设备</h3>
+<p>在中央端，本地中央设备由 CBCentralManager 对象表示。这些对象用于管理发现或连接的远程外围设备（由 CBPeripheral 对象表示），包括扫描、发现和连接到广播外围设备。图 1-4 显示了如何在核心蓝牙框架中表示本地中央和远程外设。</p>
+<p>图 1-4 中央侧的核心蓝牙对象</p>
+<div align="center"> <img src="https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/Art/CBObjects_CentralSide_2x.png"/> </div>
+<p>远程外设的数据由 CBService 和 CBCharacteristic 对象表示<br />
+当我们与远程外设（由 CBPeripheral 对象表示）上的数据进行交互时，我们正在处理其服务和特征。在核心蓝牙框架中，远程外围设备的服务由 CBService 对象表示。同样，远程外围设备服务的特征由 CBCharacteristic 对象表示。图 1-5 说明了远程外设服务和特性的基本结构。</p>
+<p>图 1-5 远程外设的服务和特征树</p>
+<div align="center"> <img src="https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/Art/TreeOfServicesAndCharacteristics_Remote_2x.png"/> </div>
+<h2><a id="%E5%A4%96%E5%9B%B4%E4%BE%A7%E7%9A%84%E7%89%A9%E4%BD%93" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>外围侧的物体</h2>
+<p>从 macOS 10.9 和 iOS 6 开始，Mac 和 iOS 设备可以用作低功耗蓝牙外围设备，为其他设备（包括其他 Mac、iPhone 和 iPad 设备）提供数据。设置设备以实现外围角色时，我们将在低功耗蓝牙通信的外围端执行操作。</p>
+<h2><a id="%E6%9C%AC%E5%9C%B0%E5%A4%96%E5%9B%B4%E8%AE%BE%E5%A4%87%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%B8%AD%E5%A4%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>本地外围设备和远程中央</h2>
+<p>在外设端，本地外设由CBPeripheralManager对象表示。这些对象用于管理本地外围设备的服务和特征数据库中的已发布服务，并将这些服务通告到远程中央设备（由 CBCentral 对象表示）。外围管理器对象还用于响应来自这些远程中心的读取和写入请求。图 1-6 显示了本地外设和远程中心在核心蓝牙框架中的表示方式。</p>
+<p>图1-6 外设侧的核心蓝牙对象</p>
+<div align="center"> <img src="https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/Art/CBObjects_PeripheralSide_2x.png"/> </div>
+<h3><a id="%E6%9C%AC%E5%9C%B0%E5%A4%96%E8%AE%BE%E7%9A%84%E6%95%B0%E6%8D%AE%E7%94%B1cbmutableservice%E5%92%8Ccbmutablefeature%E5%AF%B9%E8%B1%A1%E8%A1%A8%E7%A4%BA" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>本地外设的数据由CBMutableService和CBMutableFeature对象表示</h3>
+<p>当我们在本地外围设备（由 CBPeripheralManager 对象表示）上设置数据并与之交互时，我们正在处理其服务和特征的可变版本。在核心蓝牙框架中，本地外设的服务由CBMutableService对象表示。同样，本地外围设备服务的特征由 CBMutableSignature 对象表示。图 1-7 说明了本地外围设备的服务和特征的基本结构。</p>
+<p>图 1-7 本地外设的服务和特征树</p>
+<div align="center"> <img src="https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/Art/TreeOfServicesAndCharacteristics_Local_2x.png"/> </div>
+</div></body></html>
