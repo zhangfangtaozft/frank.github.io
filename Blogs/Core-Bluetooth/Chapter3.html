@@ -1,0 +1,903 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #ffffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%230595bf' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e2e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e8e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #bababa;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #bababa;
+}
+
+.markdown-body table th {
+  background-color: #e8e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f8f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e2e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f8f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008327;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #c0c0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #c0c0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    code,pre,pre code{
+        overflow: visible; word-wrap: break-word !important;
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script><script>window.MathJax = {     tex: { tags: 'ams' },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="%E6%89%A7%E8%A1%8C%E5%B8%B8%E8%A7%81%E7%9A%84%E5%A4%96%E5%9B%B4%E8%A7%92%E8%89%B2%E4%BB%BB%E5%8A%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>执行常见的外围角色任务</h1>
+<p>在上一章中，我们学习了如何从中央侧执行最常见的低功耗蓝牙任务。在本章中，我们将学习如何使用酷睿蓝牙框架从外设端执行最常见的低功耗蓝牙任务。以下基于代码的示例将帮助你开发应用，以在本地设备上实现外围角色。具体来说，我们将学习如何：</p>
+<ul>
+<li>启动外设管理器对象</li>
+<li>在本地外围设备上设置服务和特性</li>
+<li>将服务和特征发布到设备的本地数据库</li>
+<li>广播我们的服务</li>
+<li>响应来自连接的中央的读取和写入请求</li>
+<li>将更新的特征值发送到订阅的中央</li>
+</ul>
+<p>在本章中找到的代码示例简单而抽象;我们可能需要进行适当的更改才能将它们合并到实际应用中。与在本地设备上实现外围角色相关的更多高级主题（包括提示、技巧和最佳实践）将在后面的章节中介绍：iOS 应用的核心蓝牙后台处理和将本地设备设置为外围设备的最佳做法。</p>
+<h1><a id="%E5%90%AF%E5%8A%A8%E5%A4%96%E8%AE%BE%E7%AE%A1%E7%90%86%E5%99%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>启动外设管理器</h1>
+<p>在本地设备上实现外设角色的第一步是分配和初始化外设管理器实例（由 CBPeripheralManager 对象表示）。通过调用 CBPeripheralManager 类的 initWithDelegate：queue：options： 方法来启动外设管理器，如下所示：</p>
+<pre><code class="language-plain_text">myPeripheralManager =
+        [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
+</code></pre>
+<p>在此示例中，self 设置为委托以接收任何外围角色事件。将调度队列指定为 nil 时，外围管理器将使用主队列调度外围角色事件。</p>
+<p>创建外围管理器时，外围管理器调用其委托对象的外围管理器DidUpdateState： 方法。必须实现此委托方法，以确保支持低功耗蓝牙并可在本地外围设备上使用。有关如何实现此委托方法的详细信息，请参阅 CBPeripheralManagerDelegate 协议参考。</p>
+<h1><a id="%E8%AE%BE%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%92%8C%E7%89%B9%E5%BE%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>设置服务和特征</h1>
+<p>如图 1-7 所示，本地外围设备的服务和特征数据库以树状方式组织。我们必须以这种树状方式组织它们，以在本地外围设备上设置服务和特征。执行这些任务的第一步是了解如何识别服务和特征。</p>
+<h2><a id="%E6%9C%8D%E5%8A%A1%E5%92%8C%E7%89%B9%E5%BE%81%E7%94%B1uuid%E6%A0%87%E8%AF%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>服务和特征由 UUID 标识</h2>
+<p>外设的服务和特征由特定于 128 位蓝牙的 UUID 标识，这些 UUID 在核心蓝牙框架中由 CBUUID 对象表示。虽然并非所有标识服务或特征的 UUID 都是由蓝牙特别兴趣组 （SIG） 预定义的，但蓝牙 SIG 已定义并发布了许多常用的 UUID，为方便起见，这些 UUID 已缩短为 16 位。例如，蓝牙 SIG 预定义了将心率服务标识为 180D 的 16 位 UUID。此 UUID 是从其等效的 128 位 UUID 0000180D-0000-1000-8000-00805F9B34FB 缩短而来的，后者基于蓝牙 4.0 规范第 3 卷 F 部分第 3.2.1 节中定义的蓝牙基础 UUID。</p>
+<p>CBUUID 类提供了工厂方法，使得在开发应用时处理长 UUID 变得更加容易。例如，无需在代码中传递心率服务的 128 位 UUID 的字符串表示形式，只需使用 UUIDWithString 方法从服务的预定义 16 位 UUID 创建 CBUUID 对象，如下所示：</p>
+<pre><code class="language-plain_text">CBUUID *heartRateServiceUUID = [CBUUID UUIDWithString: @&quot;180D&quot;];
+</code></pre>
+<p>从预定义的 16 位 UUID 创建 CBUUID 对象时，核心蓝牙会使用蓝牙基本 UUID 预填充 128 位 UUID 的其余部分。</p>
+<h2><a id="%E4%B8%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1%E5%92%8C%E7%89%B9%E5%BE%81%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84uuid" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>为自定义服务和特征创建自己的 UUID</h2>
+<p>我们可能具有预定义的蓝牙 UUID 无法识别的服务和特征。如果这样做，则需要生成自己的 128 位 UUID 来识别它们。</p>
+<p>使用命令行实用程序 uuidgen 轻松生成 128 位 UUID。要开始使用，请在终端中打开一个窗口。接下来，对于需要使用 UUID 标识的每个服务和特征，在命令行上键入 uuidgen，以接收由连字符标点的 ASCII 字符串形式的唯一 128 位值，如以下示例所示：</p>
+<pre><code class="language-plain_text">$ uuidgen
+71DA3FD1-7E10-41C1-B16F-4430B506CDE7
+</code></pre>
+<p>然后，我们可以使用此 UUID 通过 UUIDWithString 方法创建 CBUUID 对象，如下所示：</p>
+<pre><code class="language-plain_text">CBUUID *myCustomServiceUUID =
+    [CBUUID UUIDWithString：@“71DA3FD1-7E10-41C1-B16F-4430B506CDE7”];
+</code></pre>
+<h2><a id="%E6%9E%84%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%92%8C%E7%89%B9%E5%BE%81%E6%A0%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>构建服务和特征树</h2>
+<p>获得服务和特征的 UUID 后（由 CBUUID 对象表示），我们可以创建可变服务和特征，并以上述树状方式组织它们。例如，如果你有一个特征的 UUID，你可以通过调用 CBMutableCharacteristic 类的 initWithType：properties：value：permissions： 方法来创建一个可变特征，如下所示：</p>
+<pre><code class="language-plain_text"> myCharacteristic =
+        [[CBMutableCharacteristic alloc] initWithType:myCharacteristicUUID
+         properties:CBCharacteristicPropertyRead
+         value:myValue permissions:CBAttributePermissionsReadable];
+</code></pre>
+<p>创建可变特征时，可以设置其属性、值和权限。我们设置的属性和权限确定特征的值是可读还是可写，以及连接的中央是否可以订阅特征的值。在此示例中，特征的值设置为可由连接的中央读取。有关可变特征的支持属性和权限范围的详细信息，请参阅 CBMutableCharacter 类参考。</p>
+<blockquote>
+<p>注： 如果为特征指定值，则会缓存该值，并将其属性和权限设置为可读。因此，如果需要特征的值可写，或者希望该值在该特征所属的已发布服务的生存期内发生变化，则必须将值指定为 nil。遵循此方法可确保在外围管理器收到来自连接的中央中央的读取或写入请求时，外围管理器动态处理和请求该值。</p>
+</blockquote>
+<p>创建可变特征后，可以创建与该特征关联的可变服务。为此，请调用 CBMutableService 类的 initWithType：primary： 方法，如下所示：</p>
+<pre><code class="language-plain_text">myService = [[CBMutableService alloc] initWithType：myServiceUUID primary：YES];
+</code></pre>
+<p>在此示例中，第二个参数设置为 YES，表示服务是主服务而不是辅助服务。主服务描述设备的主要功能，可由其他服务包含（引用）。辅助服务描述仅在引用它的另一个服务的上下文中相关的服务。例如，心率监测器的主要服务可能是公开来自监测器的心率传感器的心率数据，而辅助服务可能是公开传感器的电池数据。</p>
+<p>创建服务后，可以通过设置服务的特征数组将特征与其关联，如下所示：</p>
+<pre><code class="language-plain_text">myService.characteristics = @[myCharacteristic];
+</code></pre>
+<h1><a id="%E5%8F%91%E5%B8%83%E6%88%91%E4%BB%AC%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%92%8C%E7%89%B9%E5%BE%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>发布我们的服务和特征</h1>
+<p>构建服务和特征树后，在本地设备上实现外围角色的下一步是将它们发布到设备的服务和特征数据库。使用核心蓝牙框架可以轻松执行此任务。你调用 CBPeripheralManager 类的 addService： 方法，如下所示：</p>
+<pre><code class="language-plain_text">[myperiipheralManager addService：myService];
+</code></pre>
+<p>当我们调用此方法来发布服务时，外围管理器将调用其委托对象的外围管理器：didAddService：error：方法。如果发生错误并且无法发布服务，请实现此委托方法来访问错误的原因，如以下示例所示：</p>
+<pre><code class="language-plain_text">- (void)peripheralManager:(CBPeripheralManager *)peripheral
+            didAddService:(CBService *)service
+                    error:(NSError *)error {
+ 
+    if (error) {
+        NSLog(@&quot;Error publishing service: %@&quot;, [error localizedDescription]);
+    }
+    ...
+</code></pre>
+<blockquote>
+<p>注： 将服务及其任何关联特征发布到外围设备的数据库后，将缓存该服务，我们无法再对其进行更改。</p>
+</blockquote>
+<h1><a id="%E5%B9%BF%E6%92%AD%E6%88%91%E4%BB%AC%E7%9A%84%E6%9C%8D%E5%8A%A1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>广播我们的服务</h1>
+<p>将服务和特征发布到设备的服务和特征数据库后，我们就可以开始向可能正在侦听的任何中央播发其中一些服务和特征。如以下示例所示，我们可以通过调用 CBPeripheralManager 类的 startAdvertising： 方法来播发某些服务，该方法传入播发数据的字典（NSDictionary 的实例）：</p>
+<pre><code class="language-plain_text"> [myPeripheralManager startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey :
+        @[myFirstService.UUID, mySecondService.UUID] }];
+</code></pre>
+<p>在此示例中，字典中唯一的键 CBAdvertisementDataServiceUUIDsKey 期望 CBUUID 对象的数组（NSArray 的实例）作为值，这些对象表示要通告的服务的 UUID。可以在播发数据字典中指定的可能键在 CBCentralManagerDelegate 协议参考中的通告数据检索键中所述的常量中详细介绍。也就是说，外围管理器对象仅支持两个键：CBAdvertisementDataLocalNameKey 和 CBAdvertisementDataServiceUUIDsKey。</p>
+<p>当我们开始在本地外围设备上播发某些数据时，外围管理器将调用外围设备管理器DidStartAdvertising：error：其委托对象的方法。如果发生错误并且无法播发服务，请实现此委托方法来访问错误的原因，如下所示：</p>
+<pre><code class="language-plain_text">- (void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheral
+                                       error:(NSError *)error {
+ 
+    if (error) {
+        NSLog(@&quot;Error advertising: %@&quot;, [error localizedDescription]);
+    }
+    ...
+</code></pre>
+<blockquote>
+<p>注意：数据广播是在“尽力而为”的基础上进行的，因为空间有限，并且可能会有多个应用同时投放广播。有关详细信息，请参阅 CBPeripheralManager 类参考中对 startAdvertising： 方法的讨论。</p>
+<p>当我们的应用在后台运行时，广播行为也会受到影响。本主题将在下一章 iOS 应用的核心蓝牙后台处理中讨论。</p>
+</blockquote>
+<p>一旦我们开始广播数据，远程中央就可以发现并启动与我们的连接。</p>
+<h1><a id="%E5%93%8D%E5%BA%94%E6%9D%A5%E8%87%AA%E4%B8%AD%E5%A4%AE%E7%9A%84%E8%AF%BB%E5%8F%96%E5%92%8C%E5%86%99%E5%85%A5%E8%AF%B7%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>响应来自中央的读取和写入请求</h1>
+<p>连接到一个或多个远程中央后，我们可以开始接收来自它们的读取或写入请求。执行此操作时，请务必以适当的方式响应这些请求。以下示例介绍如何处理此类请求。</p>
+<p>当连接的中央请求读取我们的特征之一的值时，外围管理器调用外围设备管理器：didReceiveReadRequest：其委托对象的方法。委托方法以 CBATTRequest 对象的形式将请求传递给我们，该对象具有许多可用于完成请求的属性。</p>
+<p>例如，当我们收到读取特征值的简单请求时，可以使用从委托方法接收的 CBATTRequest 对象的属性来确保设备数据库中的特征与远程中央在原始读取请求中指定的特征匹配。我们可以开始实现此委托方法，如下所示：</p>
+<pre><code class="language-plain_text">- (void)peripheralManager:(CBPeripheralManager *)peripheral
+    didReceiveReadRequest:(CBATTRequest *)request {
+ 
+    if ([request.characteristic.UUID isEqual:myCharacteristic.UUID]) {
+        ...
+</code></pre>
+<p>如果特征的 UUID 匹配，下一步是确保读取请求不会要求从超出特征值边界的索引位置读取。如以下示例所示，我们可以使用 CBATTRequest 对象的 offset 属性来确保读取请求不会尝试读取超出正确的边界：</p>
+<pre><code class="language-plain_text"> if (request.offset &gt; myCharacteristic.value.length) {
+        [myPeripheralManager respondToRequest:request
+            withResult:CBATTErrorInvalidOffset];
+        return;
+    }
+</code></pre>
+<p>假设请求的偏移量已验证，现在将请求的特征属性的值（其值默认为 nil）设置为在本地外围设备上创建的特征的值，同时考虑读取请求的偏移量：</p>
+<pre><code class="language-plain_text">    request.value = [myCharacteristic.value
+        subdataWithRange:NSMakeRange(request.offset,
+        myCharacteristic.value.length - request.offset)];
+</code></pre>
+<p>设置值后，响应远程中央以指示请求已成功完成。为此，调用 CBPeripheralManager 类的 respondToRequest：withResult： 方法，传回请求（我们更新了其值）和请求的结果，如下所示：</p>
+<pre><code class="language-plain_text">  [myPeripheralManager respondToRequest:request withResult:CBATTErrorSuccess];
+    ...
+
+</code></pre>
+<p>每次调用外围设备管理器：didReceiveReadRequest： 委托方法时，只调用一次 respondToRequest：withResult： 方法。</p>
+<blockquote>
+<p>注意：如果特征的 UUID 不匹配，或者由于任何其他原因无法完成读取，则不会尝试完成请求。相反，我们将立即调用 respondToRequest：withResult： 方法，并提供指示失败原因的结果。有关可能指定的结果的列表，请参阅核心蓝牙常量参考中的 CBATTError 常量枚举。</p>
+</blockquote>
+<p>处理来自连接的中央发出的写入请求也很简单。当连接的中央发送请求以写入一个或多个特征的值时，外围管理器调用其委托对象的外围管理器：didReceiveWriteRequests：方法。这一次，委托方法以包含一个或多个 CBATTRequest 对象的数组的形式将请求传递给我们，每个对象表示一个写入请求。确保可以满足写入请求后，可以写入特征的值，如下所示：</p>
+<pre><code class="language-plain_text">myCharacteristic.value = request.value;
+</code></pre>
+<p>尽管上面的示例没有说明这一点，但在写入特征的值时，请务必考虑请求的 offset 属性。</p>
+<p>就像响应读取请求一样，每次调用外围设备管理器：didReceiveWriteRequests：delegate方法时，只需调用一次 respondToRequest：withResult： 方法。也就是说，respondToRequest：withResult： 方法的第一个参数需要单个 CBATTRequest 对象，即使我们可能已从外围管理器：didReceiveWriteRequests： delegate 方法收到包含多个 CBATTRequest 对象的数组。我们应该传入数组的第一个请求，如下所示：</p>
+<pre><code class="language-plain_text"> [myPeripheralManager respondToRequest:[requests objectAtIndex:0]
+        withResult:CBATTErrorSuccess];
+</code></pre>
+<blockquote>
+<p>注意：像对待单个请求一样对待多个请求 - 如果无法满足任何单个请求，则不应满足其中任何一个请求。相反，请立即调用 respondToRequest：withResult： 方法，并提供指示失败原因的结果。</p>
+</blockquote>
+<h1><a id="%E5%B0%86%E6%9B%B4%E6%96%B0%E7%9A%84%E7%89%B9%E5%BE%81%E5%80%BC%E5%8F%91%E9%80%81%E5%88%B0%E8%AE%A2%E9%98%85%E7%9A%84%E4%B8%AD%E5%A4%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>将更新的特征值发送到订阅的中央</h1>
+<p>通常，连接的中央将订阅一个或多个特征值，如订阅特征值中所述。当他们这样做时，我们有责任在他们订阅的特征值发生变化时向他们发送通知。以下示例介绍了如何操作。</p>
+<p>当连接的中央订阅我们的特征之一的值时，外围管理器调用外围设备管理器：中央：didSubscribeToCharacteristic：其委托对象的方法：</p>
+<pre><code class="language-plain_text">- (void)peripheralManager:(CBPeripheralManager *)peripheral
+                  central:(CBCentral *)central
+didSubscribeToCharacteristic:(CBCharacteristic *)characteristic {
+ 
+    NSLog(@&quot;Central subscribed to characteristic %@&quot;, characteristic);
+    ...
+</code></pre>
+<p>使用上述委托方法作为提示开始发送中央更新的值。</p>
+<p>接下来，获取特征的更新值，并通过调用 CBPeripheralManager 类的 updateValue：forCharacteristic：onSubscribedCentrals： 方法将其发送到中央。</p>
+<pre><code class="language-plain_text">NSData *updatedValue = // fetch the characteristic's new value
+    BOOL didSendValue = [myPeripheralManager updateValue:updatedValue
+        forCharacteristic:characteristic onSubscribedCentrals:nil];
+</code></pre>
+<p>调用此方法将更新的特征值发送到订阅的中央时，可以在最后一个参数中指定要更新的中央。如上例所示，如果指定 nil，则会更新所有已连接和已订阅的中央（并忽略尚未订阅的任何已连接中央）。</p>
+<p>updateValue：forCharacteristic：onSubscribedCentrals： 方法返回一个布尔值，该值指示更新是否已成功发送到订阅的中央。如果用于传输更新值的基础队列已满，则该方法返回 NO。然后，当传输队列中的更多空间可用时，外围管理器调用其委托对象的外围管理器是准备更新订阅者：方法。然后，我们可以实现此委托方法来重新发送值，再次使用 updateValue：forCharacteristic：onSubscribedCentrals： 方法。</p>
+<blockquote>
+<p>注意：使用通知将单个数据包发送到订阅的中央。也就是说，当我们更新订阅的中央时，我们应该在单个通知中发送整个更新的值，方法是仅调用一次 updateValue：forCharacteristic：onSubscribedCentrals： 方法。</p>
+</blockquote>
+<p>根据特征值的大小，并非所有数据都可以通过通知传输。如果发生这种情况，则应通过调用 CBPeripheral 类的 readValueForCharacteristic： 方法在中央端处理这种情况，该方法可以检索整个值。</p>
+</div></body></html>
