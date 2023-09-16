@@ -1,0 +1,980 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #ffffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%230595bf' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e2e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e8e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #bababa;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #bababa;
+}
+
+.markdown-body table th {
+  background-color: #e8e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f8f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e2e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f8f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008327;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #c0c0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #c0c0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    code,pre,pre code{
+        overflow: visible; word-wrap: break-word !important;
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script><script>window.MathJax = {     tex: { tags: 'ams' },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="24%E6%8F%90%E4%BE%9B-javascript%E5%AF%B9%E8%B1%A1%E8%A1%A8%E7%A4%BA%E6%B3%95%EF%BC%88-json%EF%BC%89%E7%AB%A0%E8%8A%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>24_提供 JavaScript 对象表示法 （JSON） 章节</h1>
+<p>为 HTTP 实时流式处理准备 JSON 章节。</p>
+<h1><a id="%E6%A6%82%E8%BF%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>概述</h1>
+<p>内容提供商使用 HTTP 实时流 （HLS） 多变量播放列表中的 EXT-X-SESSION-DATA 标记提供章节标记和其他每章元数据。Apple 的 iOS、tvOS 和 macOS 平台以 JSON 形式接收此元数据，这是一种使用人类可读文本来定义 RFC 7159 中描述的数据对象的格式。</p>
+<blockquote>
+<p>注意</p>
+<p>本文仅供参考。Apple 可能拥有涵盖本文档中主题的专利、专利申请、商标、版权或其他知识产权。本文的提供并不授予我们任何专利、商标、版权或其他知识产权的许可。</p>
+</blockquote>
+<h1><a id="%E7%BB%84%E7%BB%87%E7%AB%A0%E8%8A%82%E5%85%83%E6%95%B0%E6%8D%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>组织章节元数据</h1>
+<p>章节数据是使用四种不同类型描述章节的信息：计时、标题、图像和常规元数据。设计章节数据时，请记住以下几点：</p>
+<ul>
+<li>
+<p>每章都需要一个开始时间，并且可能有一个可选的持续时间。</p>
+</li>
+<li>
+<p>每个章节可能有多个标题、图像和元数据项。</p>
+</li>
+<li>
+<p>章节中的每个标题都有一个唯一的 BCP 47 语言标记。</p>
+</li>
+<li>
+<p>章节中的每个元数据项都有唯一的键和语言。</p>
+</li>
+</ul>
+<p>章节元数据显示为章节数组。数组中的每个元素都包含有关该章节的信息。第一个数组元素描述第一章，第二个元素描述第二章，依此类推。</p>
+<p>章节数组中的每个元素都是一个称为章节条目的 JSON 对象。章节条目必须包含开始时间。章节条目应包含标题、图像和可能的元数据。</p>
+<p>章节条目可能包含名为 Chapter 的项目，以提高 JSON 的人类可读性。它还可能包含名为持续时间的项目。除非指定持续时间，否则假定章节条目具有从开始时间到下一章条目的开始时间的持续时间。章节计时可以重叠和嵌套，在这种情况下，必须同时存在开始时间和持续时间。</p>
+<p>下面是格式化为 JSON 的章节数据的简单三章示例。仅显示章节标题和开始时间。每个章节标题都有两种不同的语言：英语和西班牙语。</p>
+<pre><code class="language-plain_text">[
+    {
+        &quot;chapter&quot;: 1,
+        &quot;start-time&quot;: 0,
+        &quot;titles&quot;: [
+            {
+                &quot;language&quot;: &quot;en&quot;,
+                &quot;title&quot;: &quot;birth&quot;
+            },
+            {
+                &quot;language&quot;: &quot;es&quot;,
+                &quot;title&quot;: &quot;nacimiento&quot;
+            }
+        ]
+    },
+    {
+        &quot;chapter&quot;: 2,
+        &quot;start-time&quot;: 500.1,
+        &quot;titles&quot;: [
+            {
+                &quot;language&quot;: &quot;en&quot;,
+                &quot;title&quot;: &quot;life&quot;
+            },
+            {
+                &quot;language&quot;: &quot;es&quot;,
+                &quot;title&quot;: &quot;vida&quot;
+            }
+        ]
+    },
+    {
+        &quot;chapter&quot;: 3,
+        &quot;start-time&quot;: 1200.2,
+        &quot;titles&quot;: [
+            {
+                &quot;language&quot;: &quot;en&quot;,
+                &quot;title&quot;: &quot;death&quot;
+            },
+            {
+                &quot;language&quot;: &quot;es&quot;,
+                &quot;title&quot;: &quot;muerte&quot;
+            }
+        ]
+    }
+]
+</code></pre>
+<p>下面是 JSON 章节数据格式的一般布局。JavaScript 注释不是合法的 JSON，仅用于说明目的。</p>
+<pre><code class="language-plain_text">[
+    {
+        &quot;chapter&quot;: number,
+        &quot;start-time&quot;: number,
+        &quot;duration&quot;: number,
+        &quot;titles&quot;: [
+            {
+                &quot;language&quot;: string,
+                &quot;title&quot;: string
+            },
+            // … (for each language for this chapter)
+        ],
+        &quot;images&quot;: [
+            {
+                &quot;image-category&quot;: string,
+                &quot;pixel-width&quot;: number,
+                &quot;pixel-height&quot;: number,
+                &quot;url&quot;: string
+            },
+            // … (for each image type for this chapter)
+        ],
+        &quot;metadata&quot;: [
+            {
+                &quot;key&quot;: string,
+                &quot;value&quot;: object | number | string | array,
+                &quot;language&quot;: string,
+            },
+            // … for each metadata value for this chapter
+        ],
+    },
+    // … for each chapter
+]
+</code></pre>
+<h1><a id="%E6%B7%BB%E5%8A%A0%E6%A0%87%E9%A2%98" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>添加标题</h1>
+<p>章节条目可能包含标题 JSON 数组。标题数组的每个元素都是一个 JSON 对象，该对象必须同时包含语言 BCP 47 字符串和标题字符串，其中包含该章的标题，以语言字符串指定的语言编写。所有字符串都必须使用 UTF-8 进行编码。如果标题字符串（如数字字符串）与语言无关，请将语言设置为“und”。</p>
+<h1><a id="%E6%B7%BB%E5%8A%A0%E5%9B%BE%E5%83%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>添加图像</h1>
+<p>章节条目可能包含图像 JSON 数组。图像数组的每个元素都是一个 JSON 对象，其中包含有关每章图像的信息。例如，图像数组可能包含缩略图图像的元素和高清图像的元素。</p>
+<p>图像数组中的每个元素都必须包含一个图像类别字符串、一个像素宽度数字、一个像素高度数字和一个 url 字符串。</p>
+<p>对于相似的图像，图像类别字符串在章节中应相同。在上面提到的三章案例中，我们将对缩略图（缩略图）使用一个字符串，对高清图像 （hd） 使用另一个字符串。</p>
+<p>url 字符串必须是与章节关联的图像数据的绝对或相对 URL。相对 URL 相对于包含 JSON 章节文档的路径。</p>
+<p>图像文件本身可能采用多种图像格式。例如，JPEG、PNG 和 TIFF 都受支持。</p>
+<h1><a id="%E6%B7%BB%E5%8A%A0%E5%85%83%E6%95%B0%E6%8D%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>添加元数据</h1>
+<p>章节条目还可能包含元数据 JSON 数组。元数据数组的每个元素都是一个 JSON 对象，其中包含该章的元数据。每个元数据数组元素都包含一个必需的键和值，以及一个可选语言 BCP-47 字符串。键元素必须是字符串。value 元素可以是字符串、数字、数组或对象。如果任何值是 URI，则按原样传递。系统无法在该上下文中解释相对 URI。</p>
+<h1><a id="%E6%8C%87%E5%AE%9A%E4%B8%BB%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>指定主播放列表</h1>
+<p>JSON 格式的章节数据必须在主播放列表中使用 EXT-X-SESSION-DATA 标记指定，才能在 HTTP 实时流式传输中使用。</p>
+<p>EXT-X-SESSION-DATA 的 DATA-ID 属性必须是 com.apple.hls.chapters。URI 属性必须指向 JSON 格式的章节数据。URI 可以是绝对的，也可以是相对于包含主播放列表的路径的，如下所示：</p>
+<p>#EXT-X-SESSION-DATA：DATA-ID=“com.apple.hls.chapters”，URI=“<a href="http://meta.example.com/movie403/chapters.json%E2%80%9D">http://meta.example.com/movie403/chapters.json”</a></p>
+<h1><a id="%E6%89%A7%E8%A1%8C%E9%AA%8C%E8%AF%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>执行验证</h1>
+<p>使用以下 JSON 架构来验证章节数据。</p>
+<pre><code class="language-plain_text">{
+    &quot;$schema&quot;: &quot;http://json-schema.org/draft-04/schema#&quot;,
+    &quot;title&quot;: &quot;HLS Chapter Data&quot;,
+    &quot;description&quot;: &quot;HLS chapter data format&quot;,
+    &quot;type&quot;: &quot;array&quot;,
+    &quot;items&quot;: {
+        &quot;description&quot;: &quot;chapter entry&quot;,
+        &quot;type&quot;: &quot;object&quot;,
+        &quot;properties&quot;: {
+            &quot;chapter&quot;: {
+                &quot;description&quot;: &quot;Chapter number (optional)&quot;,
+                &quot;type&quot;: &quot;number&quot;,
+                &quot;minimum&quot;: 1
+            },
+            &quot;start-time&quot;: {
+                &quot;description&quot;: &quot;Chapter start time&quot;,
+                &quot;type&quot;: &quot;number&quot;,
+                &quot;minimum&quot;: 0
+            },
+            &quot;duration&quot;: {
+                &quot;description&quot;: &quot;Chapter duration (optional)&quot;,
+                &quot;type&quot;: &quot;number&quot;,
+                &quot;minimum&quot;: 0,
+                &quot;exclusiveMinimum&quot;: true
+            },
+            &quot;titles&quot;: {
+                &quot;description&quot;: &quot;List of titles by language for chapter (optional)&quot;,
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: {
+                    &quot;description&quot;: &quot;Title object&quot;,
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;properties&quot;: {
+                        &quot;language&quot;: {
+                            &quot;description&quot;: &quot;BCP 47 language code; und for undefined&quot;,
+                            &quot;type&quot;: &quot;string&quot;
+                        },
+                        &quot;title&quot;: {
+                            &quot;description&quot;: &quot;Chapter title string&quot;,
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;required&quot;: [&quot;language&quot;, &quot;title&quot;]
+                }
+            },
+            &quot;images&quot;: {
+                &quot;description&quot;: &quot;List of images for chapter (optional)&quot;,
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: {
+                    &quot;description&quot;: &quot;Image object&quot;,
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;properties&quot;: {
+                        &quot;image-category&quot;: {
+                            &quot;description&quot;: &quot;Image category&quot;,
+                            &quot;type&quot;: &quot;string&quot;
+                        },
+                        &quot;pixel-width&quot;: {
+                            &quot;description&quot;: &quot;Pixel width&quot;,
+                            &quot;type&quot;: &quot;integer&quot;,
+                            &quot;minimum&quot;: 0,
+                            &quot;exclusiveMinimum&quot;: true
+                        },
+                        &quot;pixel-height&quot;: {
+                            &quot;description&quot;: &quot;Pixel height&quot;,
+                            &quot;type&quot;: &quot;integer&quot;,
+                            &quot;minimum&quot;: 0,
+                            &quot;exclusiveMinimum&quot;: true
+                        },
+                        &quot;url&quot;: {
+                            &quot;description&quot;: &quot;URL to image (relative or absolute)&quot;,
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;required&quot;: [&quot;image-category&quot;, &quot;pixel-width&quot;, &quot;pixel-height&quot;, &quot;url&quot;]
+                }
+            },
+            &quot;metadata&quot;: {
+                &quot;description&quot;: &quot;List of metadata entries for chapter (optional)&quot;,
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: {
+                    &quot;description&quot;: &quot;Metadata object&quot;,
+                    &quot;type&quot;: &quot;object&quot;,
+                    &quot;properties&quot;: {
+                        &quot;key&quot;: {
+                            &quot;description&quot;: &quot;Key value name&quot;,
+                            &quot;type&quot;: &quot;string&quot;
+                        },
+                        &quot;value&quot;: {
+                            &quot;description&quot;: &quot;Metadata value&quot;,
+                            &quot;type&quot;: [&quot;string&quot;, &quot;number&quot;, &quot;boolean&quot;, &quot;array&quot;, &quot;object&quot;]
+                        },
+                        &quot;language&quot;: {
+                            &quot;description&quot;: &quot;BCP 47 language code (optional)&quot;,
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;required&quot;: [&quot;key&quot;, &quot;value&quot;]
+                }
+            }
+        },
+        &quot;required&quot;: [&quot;start-time&quot;]
+    }
+}
+</code></pre>
+<h1><a id="%E6%B5%8B%E8%AF%95%E5%92%8C%E8%AE%BF%E9%97%AE%E7%AB%A0%E8%8A%82%E6%95%B0%E6%8D%AE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>测试和访问章节数据</h1>
+<p>使用 QuickTime Player 使用章节数据快速测试 HLS 流。QuickTime Player 将显示章节弹出控件（带有图像，如果有的话）。在 QuickTime 播放器中，使用“文件&gt;打开位置”或“⌘L ”打开 URL。QuickTime Player 按章节在 JSON 文件中出现的顺序显示章节，而不对章节进行排序或重新排列。</p>
+<p>AVAsset 包含有关如何访问章节数据的详细信息。所描述的方法返回一个 AVTimedMetadataGroup 对象的数组，每章一个对象。组的顺序与 JSON 文件的顺序匹配。</p>
+<p>每个 AVTimedMetadataGroup 对象都有一个开始时间、结束时间和一个 AVMetadataItem 列表。JSON 中的标题、图像和元数据数组中的每个项都位于元数据项列表中。</p>
+<p>图像有一个额外的属性字典。此字典包含一个键“iTunesImageResolution”，其值是一个字典，其中包含 JSON 条目中的像素宽度、像素高度和图像类别。</p>
+<p>元数据项键放置在密钥空间 AVMetadataKeySpaceQuickTimeMetadata。此密钥空间定义其要表示为反向 DNS 字符串的密钥值。这允许我们以既定的方式定义自己的密钥，以避免冲突。</p>
+</div></body></html>
