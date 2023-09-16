@@ -1,0 +1,959 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #ffffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%230595bf' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e2e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e8e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #bababa;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #bababa;
+}
+
+.markdown-body table th {
+  background-color: #e8e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f8f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e2e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f8f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008327;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #c0c0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #c0c0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    code,pre,pre code{
+        overflow: visible; word-wrap: break-word !important;
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script><script>window.MathJax = {     tex: { tags: 'ams' },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="19%E5%90%AF%E7%94%A8%E4%BD%8E%E5%BB%B6%E8%BF%9F-http%E5%AE%9E%E6%97%B6%E6%B5%81%E5%BC%8F%E4%BC%A0%E8%BE%93%EF%BC%88-hls%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>19_启用低延迟 HTTP 实时流式传输 （HLS）</h1>
+<h1><a id="%E6%A6%82%E8%BF%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>概述</h1>
+<p>HLS 协议向全球规模的受众提供实时和点播内容流。从历史上看，HLS 更倾向于流可靠性而不是延迟。低延迟 HLS 扩展了协议，以实现低延迟视频流，同时保持可扩展性。新的低延迟模式将公共网络上的视频延迟降低到标准电视广播的范围内。</p>
+<p>后端制作工具和内容交付系统必须实施新规则，以实现低延迟流播放。低延迟 HLS 在以下方面提供了新功能：</p>
+<ul>
+<li>
+<p>生成部分段</p>
+</li>
+<li>
+<p>播放列表增量更新</p>
+</li>
+<li>
+<p>阻止播放列表重新加载</p>
+</li>
+<li>
+<p>使用预加载提示</p>
+</li>
+<li>
+<p>格式副本报告</p>
+</li>
+</ul>
+<p>HLS 规范在 HTTP 实时流式处理第 2 版修订版 7 及更高版本中定义了低延迟扩展。</p>
+<h1><a id="%E7%94%9F%E6%88%90%E9%83%A8%E5%88%86%E5%AA%92%E4%BD%93%E6%AE%B5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>生成部分媒体段</h1>
+<p>低延迟 HLS 提供了一个并行通道，用于在媒体播放列表的实时边缘分发媒体，该通道将媒体划分为大量较小的文件，例如 CMAF 块。这些较小的文件称为 HLS 部分段。由于每个部分片段的持续时间都很短，因此可以比其父片段更早地打包、发布并添加到媒体播放列表中。</p>
+<p>常规媒体段可能每个为 6 秒，而示例部分片段可能只有 200 毫秒。第一个部分段可能在前一个分段发布后仅 200 毫秒发布，然后是其 29 个对等段，最后是一个常规长度的 6 秒媒体段，其中包含与其 30 个部分段的串联相同的媒体。为了减少播放列表膨胀，服务器会在部分片段大于（旧）实时边缘的三个目标持续时间时从媒体播放列表中删除它们。</p>
+<p>您可以使用新的 EXT-X-PART 标签将部分片段添加到媒体播放列表中。您可以将其他媒体段标签（例如 EXT-X-DISCONTINUITY）放置在父区段边界。</p>
+<p>部分分段必须采用 HTTP 实时流式传输第 2 版第 3.1 节中所述的受支持的媒体段格式之一。</p>
+<h1><a id="%E5%9C%A8%E9%A1%B5%E9%9D%A2%E9%93%BE%E6%8E%A5%E4%B8%AD%E6%8F%90%E4%BE%9B%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>在页面链接中提供播放列表增量更新</h1>
+<p>客户端使用低延迟 HLS 更频繁地传输播放列表。他们可以请求，服务器可以提供播放列表增量更新，从而降低此传输成本。这些更新将客户端已有的播放列表的相当一部分替换为新的 EXT-X-SKIP 标记。</p>
+<h1><a id="%E9%98%BB%E6%AD%A2%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BD%BD" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>阻止播放列表重新加载</h1>
+<p>为了支持新媒体段和部分片段的高效客户端通知，低延迟 HLS 引入了阻止播放列表重新加载请求的功能。当客户端发出 HTTP GET 以请求媒体播放列表更新时，它可以添加称为传递指令的特殊查询参数，以指定它希望播放列表响应包含未来的段。然后，服务器保留请求（块），直到包含该段的播放列表版本可用。阻止播放列表重新加载可消除播放列表轮询。</p>
+<h1><a id="%E6%8F%90%E4%BE%9B%E9%A2%84%E5%8A%A0%E8%BD%BD%E6%8F%90%E7%A4%BA%E5%92%8C%E9%98%BB%E6%AD%A2%E5%AA%92%E4%BD%93%E4%B8%8B%E8%BD%BD" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>提供预加载提示和阻止媒体下载</h1>
+<p>在全球范围内交付低延迟流时，消除不必要的往返至关重要。服务器使用新标记 EXT-X-PRELOAD-HINT 来通知客户端即将推出的部分段和媒体初始化部分。客户端可以提前发出对提示资源的 GET 请求;一旦介质可用，服务器就会响应请求。</p>
+<h1><a id="%E6%8F%90%E4%BE%9B%E6%A0%BC%E5%BC%8F%E5%89%AF%E6%9C%AC%E6%8A%A5%E5%91%8A" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>提供格式副本报告</h1>
+<p>以低延迟播放时，客户端必须能够以最少的往返次数切换演绎版，以便执行比特率自适应。为了支持此功能，服务器将多变量播放列表中其他格式副本的格式副本报告添加到每个媒体播放列表中。EXT-X-格式副本报告标记带有格式副本报告，并提供信息，例如该格式副本的媒体播放列表中当前中的最后一个媒体序列号和部分。</p>
+<h1><a id="%E6%B7%BB%E5%8A%A0%E4%BD%8E%E5%BB%B6%E8%BF%9Fhls%E4%BA%A4%E4%BB%98%E6%8C%87%E4%BB%A4" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>添加低延迟 HLS 交付指令</h1>
+<p>HLS 现在定义了传递指令，这些指令是可以添加到播放列表的 GET 请求 URL 的特殊查询参数。这些交付指令包括：</p>
+<p>_HLS_msn=<M><br />
+指示服务器必须保留请求，直到播放列表包含媒体序列号为 M 或更高版本的媒体段。</p>
+<p>_HLS_part=<N><br />
+结合_HLS_msn指示服务器必须保留请求，直到播放列表包含媒体序列号 M 或以后的部分段 N。段的第一个部分段为 _HLS_part=0，第二个段为 _HLS_part=1，依此类推。_HLS_part参数需要_HLS_msn参数。</p>
+<p>_HLS_skip=是|v2<br />
+请求播放列表增量更新，其中播放列表的早期部分将替换为 EXT-X-SKIP 标记。</p>
+<h1><a id="%E5%88%A9%E7%94%A8%E6%96%B0%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE%E5%AE%9E%E7%8E%B0%E4%BD%8E%E5%BB%B6%E8%BF%9Fhls" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>利用新媒体播放列表标签实现低延迟 HLS</h1>
+<p>以下播放列表标签支持低延迟 HLS。</p>
+<p>EXT-X-SERVER-CONTROL<br />
+允许服务器指示对阻止播放列表重新加载和播放列表增量更新等功能的支持。</p>
+<p>EXT-X-PART-INF<br />
+提供有关播放列表中 HLS 部分片段的信息。</p>
+<p>EXX-部件<br />
+标识播放列表中的部分片段。</p>
+<p>EXT-X-PRELOAD-HINT<br />
+提示需要资源或资源的字节范围来播放演示文稿的后续部分。</p>
+<p>请注意，当提示的部分片段最终作为 EXT-X-PART 标签显示在播放列表中时，它可能与之前的部分片段不同。它可能具有不同的不连续序列号、介质初始化部分或加密配置。换句话说，部分段前面可以有一个 EXTINF 标签，指示前一个父段的结束，以及一个 EXT-X-DISCONTINUITY、EXT-X-MAP 或 EXT-X-KEY 标签。</p>
+<p>如果计划的细分发生变化，服务器可以选择不发布之前提示的部分细分，例如在广告提前返回的情况下。</p>
+<p>EXT-X-RENDITION-REPORT<br />
+包含有关关联格式副本的信息，该格式副本与包含它的播放列表一样最新。</p>
+<p>EXT-X-SKIP<br />
+当服务器发出播放列表增量更新时，它会将早于跳过边界的媒体段及其关联的标记替换为 EXT-X-SKIP 标记。</p>
+<h1><a id="%E9%81%B5%E5%AE%88%E4%BD%8E%E5%BB%B6%E8%BF%9F%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>遵守低延迟服务器配置文件</h1>
+<p>为了支持及时交付媒体，低延迟 HLS 需要某些传输功能，这些功能超出了常规 HLS 所需的功能。这些要求在低延迟服务器配置文件中定义。由于低延迟 HLS 语法与现有 HLS 向后兼容，因此如果客户端发现服务器不支持所需配置的某个方面，则它们将回退到常规延迟 HLS 播放。HTTP 实时流式传输第 2 版在附录 B 中定义了低延迟服务器配置文件。</p>
+<h1><a id="%E9%A2%84%E8%AE%A1%E4%BB%8Ecdn-tune-in%E4%BA%A4%E4%BB%98" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>预计从 CDN Tune-In交付</h1>
+<p>低延迟 HLS 的玩家应该期望通过 CDN 和其他 HTTP 缓存交付低延迟流。若要以低延迟开始播放，客户端必须首先获取媒体播放列表的合理最新版本。HTTP 实时流第 2 版的附录 C 描述了一种通过 HTTP 缓存获取最新媒体播放列表的有效方法。</p>
+<h1><a id="%E6%A3%80%E6%9F%A5%E4%BD%8E%E5%BB%B6%E8%BF%9Fhls%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>检查低延迟 HLS 播放列表</h1>
+<p>下面是一个低延迟播放列表的示例。</p>
+<pre><code class="language-plain_text">#EXTM3U
+# This Playlist is a response to: GET https://example.com/2M/waitForMSN.php?_HLS_msn=273&amp;_HLS_part=2
+#EXT-X-TARGETDURATION:4
+#EXT-X-VERSION:6
+#EXT-X-SERVER-CONTROL:CAN-BLOCK-RELOAD=YES,PART-HOLD-BACK=1.0,CAN-SKIP-UNTIL=12.0
+#EXT-X-PART-INF:PART-TARGET=0.33334
+#EXT-X-MEDIA-SEQUENCE:266
+#EXT-X-PROGRAM-DATE-TIME:2019-02-14T02:13:36.106Z
+#EXT-X-MAP:URI=&quot;init.mp4&quot;
+#EXTINF:4.00008,
+fileSequence266.mp4
+#EXTINF:4.00008,
+fileSequence267.mp4
+#EXTINF:4.00008,
+fileSequence268.mp4
+#EXTINF:4.00008,
+fileSequence269.mp4
+#EXTINF:4.00008,
+fileSequence270.mp4
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.0.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.1.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.2.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.3.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.4.mp4&quot;,INDEPENDENT=YES
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.5.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.6.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.7.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.8.mp4&quot;,INDEPENDENT=YES
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.9.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.10.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.11.mp4&quot;
+#EXTINF:4.00008,
+fileSequence271.mp4
+#EXT-X-PROGRAM-DATE-TIME:2019-02-14T02:14:00.106Z
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.a.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.b.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.c.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.d.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.e.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.f.mp4&quot;,INDEPENDENT=YES
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.g.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.h.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.i.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.j.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.k.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.l.mp4&quot;
+#EXTINF:4.00008,
+fileSequence272.mp4
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart273.0.mp4&quot;,INDEPENDENT=YES
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart273.1.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart273.2.mp4&quot;
+#EXT-X-PRELOAD-HINT:TYPE=PART,URI=&quot;filePart273.3.mp4&quot;
+
+
+#EXT-X-RENDITION-REPORT:URI=&quot;../1M/waitForMSN.php&quot;,LAST-MSN=273,LAST-PART=2
+#EXT-X-RENDITION-REPORT:URI=&quot;../4M/waitForMSN.php&quot;,LAST-MSN=273,LAST-PART=1
+</code></pre>
+<h1><a id="%E6%A3%80%E6%9F%A5%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E5%A2%9E%E9%87%8F%E6%9B%B4%E6%96%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>检查播放列表增量更新</h1>
+<p>下面是播放列表增量更新的示例。</p>
+<pre><code class="language-plain_text">#EXTM3U
+# Following the example above, this Playlist is a response to: GET https://example.com/2M/waitForMSN.php?_HLS_msn=273&amp;_HLS_part=3 &amp;_HLS_skip=YES
+#EXT-X-TARGETDURATION:4
+#EXT-X-VERSION:9
+#EXT-X-SERVER-CONTROL:CAN-BLOCK-RELOAD=YES,PART-HOLD-BACK=1.0,CAN-SKIP-UNTIL=12.0
+#EXT-X-PART-INF:PART-TARGET=0.33334
+#EXT-X-MEDIA-SEQUENCE:266
+#EXT-X-SKIP:SKIPPED-SEGMENTS=3
+#EXTINF:4.00008,
+fileSequence269.mp4
+#EXTINF:4.00008,
+fileSequence270.mp4
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.0.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.1.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.2.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.3.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.4.mp4&quot;,INDEPENDENT=YES
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.5.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.6.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.7.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.8.mp4&quot;,INDEPENDENT=YES
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.9.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.10.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart271.11.mp4&quot;
+#EXTINF:4.00008,
+fileSequence271.mp4
+#EXT-X-PROGRAM-DATE-TIME:2019-02-14T02:14:00.106Z
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.a.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.b.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.c.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.d.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.e.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.f.mp4&quot;,INDEPENDENT=YES
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.g.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.h.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.i.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.j.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.k.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart272.l.mp4&quot;
+#EXTINF:4.00008,
+fileSequence272.mp4
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart273.0.mp4&quot;,INDEPENDENT=YES
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart273.1.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart273.2.mp4&quot;
+#EXT-X-PART:DURATION=0.33334,URI=&quot;filePart273.3.mp4&quot;
+#EXT-X-PRELOAD-HINT:TYPE=PART,URI=&quot;filePart273.4.mp4&quot;
+
+
+#EXT-X-RENDITION-REPORT:URI=&quot;../1M/waitForMSN.php&quot;,LAST-MSN=273,LAST-PART=3
+#EXT-X-RENDITION-REPORT:URI=&quot;../4M/waitForMSN.php&quot;,LAST-MSN=273,LAST-PART=3
+</code></pre>
+<h1><a id="%E6%A3%80%E6%9F%A5%E5%AD%97%E8%8A%82%E5%AF%BB%E5%9D%80%E9%83%A8%E4%BB%B6" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>检查字节寻址部件</h1>
+<p>下面是字节范围寻址部分的示例。</p>
+<pre><code class="language-plain_text"># In these examples only the end of the Playlist is shown.
+# This is Playlist update 1
+#EXTINF:4.08,
+fs270.mp4
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;20000@0&quot;
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;23000@20000&quot;
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;18000@43000&quot;
+#EXT-X-PRELOAD-HINT:TYPE=PART,URI=&quot;fs271.mp4&quot;,BYTERANGE-START=61000
+
+
+# This is Playlist update 2
+#EXTINF:4.08,
+fs270.mp4
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;20000@0&quot;
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;23000@20000&quot;
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;18000@43000&quot;
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;19000@61000&quot;
+#EXTINF:4.08,
+fs271.mp4
+#EXT-X-PRELOAD-HINT:TYPE=PART,URI=&quot;fs272.mp4&quot;,BYTERANGE-START=0
+
+
+# This is Playlist update 3
+#EXTINF:4.08,
+fs270.mp4
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;20000@0&quot;
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;23000@20000&quot;
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;18000@43000&quot;
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs271.mp4&quot;,BYTERANGE=&quot;19000@61000&quot;
+#EXTINF:4.08,
+fs271.mp4
+#EXT-X-PART:DURATION=1.02,URI=&quot;fs272.mp4&quot;,BYTERANGE=&quot;21000@0&quot;
+#EXT-X-PRELOAD-HINT:TYPE=PART,URI=&quot;fs272.mp4&quot;,BYTERANGE-START=21000
+</code></pre>
+</div></body></html>
