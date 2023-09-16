@@ -1,0 +1,1205 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #ffffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%230595bf' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e2e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e8e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #bababa;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #bababa;
+}
+
+.markdown-body table th {
+  background-color: #e8e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f8f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e2e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f8f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008327;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #c0c0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #c0c0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    code,pre,pre code{
+        overflow: visible; word-wrap: break-word !important;
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script><script>window.MathJax = {     tex: { tags: 'ams' },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="17-apple%E8%AE%BE%E5%A4%87%E7%9A%84-http%E5%AE%9E%E6%97%B6%E6%B5%81%E5%BC%8F%E5%A4%84%E7%90%86%EF%BC%88-hls%EF%BC%89%E5%88%9B%E4%BD%9C%E8%A7%84%E8%8C%83%E9%99%84%E5%BD%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>17_Apple 设备的 HTTP 实时流式处理 （HLS） 创作规范附录</h1>
+<h1><a id="%E6%A6%82%E8%BF%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>概述</h1>
+<p>本文中的附录扩展了 Apple 设备的 HTTP 实时流式处理 （HLS） 创作规范中提供的信息。它不打算作为独立文档。</p>
+<h1><a id="%E6%B5%8B%E8%AF%95%E6%88%91%E4%BB%AC%E7%9A%84%E6%B5%81" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>测试我们的流</h1>
+<p>Apple 在 <a href="https://developer.apple.com/download/all">https://developer.apple.com/download/all</a> 时为 HTTP Live Streaming 提供了几个命令行工具。使用 Apple 开发人员帐户登录后，搜索 http 实时流式传输工具。</p>
+<p>若要帮助验证流，请使用命令行工具 mediastreamvalidator 和 hlsreport。虽然这些工具无法检查有关我们的流的所有内容，但它们所做的检查相当全面，Apple 会继续改进这些工具。</p>
+<p>通过目视检查检查流的视频质量。媒体流验证器工具不检查视频质量，因此请检查在各种网络条件下的流播放。</p>
+<h1><a id="%E4%BD%BF%E7%94%A8hlsreport" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>使用 hlsreport</h1>
+<p>使用二进制 hlsreport 从媒体流验证器创建的 JSON 文件生成 HTML 摘要报告。该报告包括几个表格，其中包含有关变体、格式副本和 I 帧变体的详细信息。每个表条目都有一个唯一的流 ID 号。包括问题列表，根据此规范分为“必须修复”和“应修复”类别。这些问题使用唯一的流 ID 交叉引用各个变体和演绎版。</p>
+<blockquote>
+<p>注意</p>
+<p>HLS 工具的早期版本使用名为 hlsreport.py 的脚本，而不是二进制文件。</p>
+</blockquote>
+<p>最简单的调用方法是：</p>
+<p>HLSREPORT validation_data.json</p>
+<p>其中validation_data.json是mediastreamvalidator生成的JSON文件。这将生成一个名为 validation_data.html 的文件，该文件是报表。我们可以使用 -o 选项更改报告文件的名称：</p>
+<p>hlsreport -o my_report.html validation_data.json</p>
+<p>有关更多信息，请参见 hlsreport（1） 手册页。</p>
+<h1><a id="%E5%A3%B0%E6%98%8E%E5%80%BC%E4%B8%8E%E6%B5%8B%E9%87%8F%E5%80%BC%E7%9A%84%E5%B8%A6%E5%AE%BD" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>声明值与测量值的带宽</h1>
+<p>VOD 比特率是针对整个内容测量的。实时（线性）比特率是在 ~1 小时的内容中测量的。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>VOD</th>
+<th>LIVE/Linear</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>测量的平均比特率与平均带宽（属性）</td>
+<td>属性值的 10% 以内</td>
+<td>&lt;属性值的 110%</td>
+</tr>
+<tr>
+<td>测量的峰值比特率与带宽（属性）</td>
+<td>属性值的 10% 以内</td>
+<td>&lt;属性值的 125%</td>
+</tr>
+<tr>
+<td>测量的峰值比特率与测量的平均比特率</td>
+<td>&lt;测量平均值的 200%</td>
+<td>无规则</td>
+</tr>
+</tbody>
+</table>
+<h1><a id="%E9%9F%B3%E9%A2%91%E5%85%BC%E5%AE%B9%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>音频兼容性</h1>
+<p>有关设备和音频格式兼容性的其他信息。</p>
+<blockquote>
+<p>注意</p>
+<p>多通道输出取决于实际输出设备的能力。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>设备</th>
+<th>AAC（立体声）</th>
+<th>AC-3/E-AC-3</th>
+<th>杜比数字增强版与杜比全景声</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iOS 设备 - 基于 A12 仿生及更高版本</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Apple TV 4K（第 1 代和第 2 代）†</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>OS X 设备 - 2018 及更高版本</td>
+<td>yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>iOS 和 tvOS 设备 - 基于 A7 或更高版本 *，但未在上面列出</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>作为E-AC-3播放</td>
+</tr>
+<tr>
+<td>较旧的 OS X 设备</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>作为E-AC-3播放</td>
+</tr>
+<tr>
+<td>Apple TV（第 3 代）、iPhone 5 和 iPhone 5C</td>
+<td>Yes</td>
+<td>仅AC-3</td>
+<td>No</td>
+</tr>
+<tr>
+<td>所有较旧的 iOS 和 tvOS 设备</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意</p>
+<p>上表中的所有设备都支持 AAC（立体声）。</p>
+</blockquote>
+<p>有关实际技术规格，请参阅 <a href="https://support.apple.com/specs/%E3%80%82">https://support.apple.com/specs/。</a></p>
+<p>*完整支持需要 iOS 9.3 或 tvOS 9.2 或更高版本。配备杜比全景声的杜比数字增强版需要 tvOS 12.0 或更高版本。</p>
+<p>采用杜比全景声†的杜比数字增强版需要 tvOS 12.0 或更高版本。</p>
+<h1><a id="%E5%85%B3%E4%BA%8E%E5%8F%98%E4%BD%93%E7%9A%84%E6%AF%94%E7%89%B9%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>关于变体的比特率</h1>
+<p>许多因素会影响对视频进行编码所需的比特率：</p>
+<ul>
+<li>
+<p>编解码器（例如，H.264 或 HEVC）</p>
+</li>
+<li>
+<p>使用的特定编码器实现和功能</p>
+</li>
+<li>
+<p>分辨率（例如，1920 x 1080、1280 x 720 等）</p>
+</li>
+<li>
+<p>帧速率（例如，24、25、30、50、60）</p>
+</li>
+<li>
+<p>每像素位数（例如，HDR 通常比 SDR 使用更多的位数）</p>
+</li>
+<li>
+<p>内容的复杂性</p>
+</li>
+<li>
+<p>期望的主观质量</p>
+</li>
+</ul>
+<p>这些因素使得内容的通用编码建议变得困难。适用于 Apple 设备的 HTTP 实时流式处理 （HLS） 创作规范包括初始比特率建议，我们可以根据内容、约束和编码工作流程评估这些建议。</p>
+<h1><a id="i%E5%B8%A7%E6%AF%94%E7%89%B9%E7%8E%87%E4%B8%8E%E6%AD%A3%E5%B8%B8%E6%AF%94%E7%89%B9%E7%8E%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>I 帧比特率与正常比特率</h1>
+<p>Apple 设备的 HTTP 实时流式处理 （HLS） 创作规范中的第 6.5 项（针对 I 帧比特率）中的公式需要一些解释。</p>
+<p>在特技播放过程中，玩家尝试每秒提供八帧。如果播放速率意味着更高的帧速率，则将丢弃帧以将帧速率保持在每秒 8 帧。如果可用帧较少，它将以较低的帧速率播放。</p>
+<p>I 帧比特率是以正常速度播放时再现的比特率。I 帧呈现形式可以是 2 fps、1 fps、0.5 fps、0.2 fps 或其他内容。设 F 为 I 帧呈现形式的帧速率。然后，8/F 是乘数，即以每秒 8 帧的速度播放演绎版提高了多少比特率。比特率的增加不会超过此系数，因为播放器每秒播放的帧数不能超过 8 帧。</p>
+<p>I 帧呈现形式应具有与正常内容类似的有效比特率。因此，正常比特率除以乘数应该是 I 帧的比特率。除以分数与乘以其倒数相同，因此结果为 6.5 — 相同分辨率的正常播放列表的比特率乘以 I 帧播放列表的 fps 除以 8。</p>
+<h1><a id="i%E5%B8%A7%E5%9B%BE%E5%83%8F%E5%BA%8F%E5%88%97" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>I 帧图像序列</h1>
+<p>添加了使用 mjpg 编解码器的 I 帧图像序列以支持某些第三方设备。序列应为低带宽，并且需要最少的处理。与图像序列相比，玩家应该更喜欢视频 I 帧变体。</p>
+<p>对图像序列的建议如下：</p>
+<ul>
+<li>
+<p>提供单个 mjpg 变体</p>
+</li>
+<li>
+<p>加密</p>
+</li>
+<li>
+<p>400 像素宽，高度基于纵横比</p>
+</li>
+<li>
+<p>每 1 到 2 秒一个关键帧</p>
+</li>
+<li>
+<p>带宽对于基于编解码器实现的分辨率应该是合理的</p>
+</li>
+</ul>
+<h1><a id="%E9%9F%B3%E9%A2%91%E5%91%88%E7%8E%B0%E5%BD%A2%E5%BC%8F%E7%BB%84%E5%92%8C%E5%8F%98%E4%BD%93" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>音频呈现形式组和变体</h1>
+<p>在建立多变量播放列表时，第一步是选择视频分辨率和编解码器。这些是我们的基本变体。每个都将有一个视频媒体播放列表。播放列表 URI 可以在多个 EXT-X-STREAM-INF 标签中重复，以便同一视频可以与不同的音频内容相关联。</p>
+<p>我们将拥有一些音频语言和编解码器。特定的编解码器可以是立体声、5.1 声音或两者兼而有之。为每对编解码器和通道数创建一个音频组。每个小组都需要包含每种语言。</p>
+<p>制作音频组时，需要记住一些事项。首先，确保我们有一个立体声 AAC 组。这是一个很好的回退，因为它是所有设备都可以播放的内容。如果我们在无损音频编解码器中具有多声道，则最好也使用多声道 AAC 编解码器。无损需要高比特率。我们想要具有较低比特率的可用产品。在播放过程中，我们不想切换通道数。如果播放是多声道的，则希望保持多声道。</p>
+<p>一般来说，播放器不会在音频编解码器之间切换，但有两个值得注意的例外。它将在AAC变体之间切换：AAC-LC，HE-AAC，HE-AACv2和USAC（也称为xHE-AAC）。我们还将在无损编解码器和 AAC 编解码器之间切换。</p>
+<p>拥有音频组后，我们可以复制每个组的变体条目，但有一些例外。如果编解码器是可切换的（如 AAC 编解码器），则可以使用具有低视频比特率的低音频比特率组和具有高视频的高音频比特率组将音频组分布到变体中。但是，如果编解码器不可切换，例如 AC-3 和无损，则我们希望每个编解码器与每个变体相关联。这不会创建新的变体播放列表;它只是在多变量播放列表中创建新的 EXT-X-STREAM-INF 标签，这些标签将视频播放列表与音频组相关联。</p>
+<p>我们可能会遇到一个问题，即没有选择我们想要支持的变体。默认行为是在当前可播放的内容中选择最高的比特率。对于 USAC 和杜比数字 Plus，这可能会导致反转，即所选变体不是我们想要的。为了解决这个问题，苹果添加了SCORE属性。该值是一个浮点数。我们必须将其放在所有变体上。如果要设置订单，则必须完成，否则将遇到无法选择的情况。通常的过滤发生在一组变体中，其中任何一个都可以播放。此时，系统使用 SCORE 来决定，最高分数获胜。</p>
+<h1><a id="codecs%E5%B1%9E%E6%80%A7%E7%9A%84%E5%80%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>CODECS 属性的值</h1>
+<p>使用 EXT-X-STREAM-INF 标签（和 EXT-X-I-FRAME-STREAM-INF）的 CODECS 属性指定媒体样本类型。该值是一个带引号的字符串，其中包含以逗号分隔的格式列表，其中每种格式指定播放列表的媒体片段或标记引用的某个格式副本的媒体片段中存在的媒体样本类型。</p>
+<p>有效的格式标识符是 RFC 6381 定义的 ISO 基本媒体文件格式命名空间中的标识符。格式标识符是由句点分隔的元素序列。第一个元素是基本样本类型。HLS 目前可识别基本样本类型的以下值：</p>
+<table>
+<thead>
+<tr>
+<th>基础样品类型</th>
+<th>描述</th>
+<th>笔记</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ac-3</td>
+<td>AC-3 audio</td>
+<td></td>
+</tr>
+<tr>
+<td>alac</td>
+<td>Apple Lossless</td>
+<td></td>
+</tr>
+<tr>
+<td>avc1</td>
+<td>H.264 (Advanced Video Coding)</td>
+<td></td>
+</tr>
+<tr>
+<td>avc3</td>
+<td>H.264 (Advanced Video Coding)</td>
+<td>不推荐使用</td>
+</tr>
+<tr>
+<td>dvh1</td>
+<td>Dolby Vision (based on hvc1)</td>
+<td></td>
+</tr>
+<tr>
+<td>dvhe</td>
+<td>Dolby Vision (based on hev1)</td>
+<td>不推荐使用</td>
+</tr>
+<tr>
+<td>ec-3</td>
+<td>Enhanced AC-3 audio</td>
+<td></td>
+</tr>
+<tr>
+<td>fLaC</td>
+<td>Free Lossless Audio Codec</td>
+<td></td>
+</tr>
+<tr>
+<td>hev1</td>
+<td>HEVC (High-Efficiency Video Coding)</td>
+<td>不推荐使用</td>
+</tr>
+<tr>
+<td>hvc1</td>
+<td>HEVC (High-Efficiency Video Coding)</td>
+<td></td>
+</tr>
+<tr>
+<td>mjpg</td>
+<td>JPEG image sequence</td>
+<td>限制使用</td>
+</tr>
+<tr>
+<td>mp4a</td>
+<td>MPEG-4 audio</td>
+<td></td>
+</tr>
+<tr>
+<td>stpp</td>
+<td>Subtitles (Timed Text)</td>
+<td></td>
+</tr>
+<tr>
+<td>wvtt</td>
+<td>WebVTT data</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意</p>
+<p>HLS识别“avc3”，“dvhe”和“hev1”，但Apple不建议使用它们。</p>
+</blockquote>
+<p>MP4 注册机构 （mp4ra.org） 列出了带有 JOC（杜比全景声）的增强型 AC-3 音频的值 ec+3。HLS 不使用该值。相反，它使用 ec-3 并在音频呈现形式的 CHANNEL 属性中使用 JOC 标记其他 JOC 内容的存在。JOC必须大写。例如，CHANNELS=“16/JOC”。数值应与杜比数字增强音轨的 EC3SpecificBox 中complexity_index_type_a字段的值匹配。</p>
+<table>
+<thead>
+<tr>
+<th>样品类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ac-3</td>
+<td>AC-3 audio</td>
+</tr>
+<tr>
+<td>alac</td>
+<td>Apple Lossless audio</td>
+</tr>
+<tr>
+<td>avc1.42001f</td>
+<td>H.264 Baseline Profile, Level 3.1 video</td>
+</tr>
+<tr>
+<td>avc1.4d0028</td>
+<td>H.264 Main Profile, Level 4.0 video</td>
+</tr>
+<tr>
+<td>avc1.640029</td>
+<td>H.264 High Profile, Level 4.1 video</td>
+</tr>
+<tr>
+<td>dvh1.05.01</td>
+<td>Dolby Vision Profile 5 (10-bit HEVC), Level 1 (720p24) video</td>
+</tr>
+<tr>
+<td>dvh1.05.06</td>
+<td>Dolby Vision Profile 5 (10-bit HEVC), Level 6 (2160p24) video</td>
+</tr>
+<tr>
+<td>ec-3</td>
+<td>Enhanced AC-3 audio</td>
+</tr>
+<tr>
+<td>fLaC</td>
+<td>Free Lossless Audio Codec audio</td>
+</tr>
+<tr>
+<td>hvc1.1.4.L126.B0</td>
+<td>HEVC Main Profile, Main Tier, Level 4.2 video</td>
+</tr>
+<tr>
+<td>hvc1.2.4.L123.B0</td>
+<td>HEVC Main 10 Profile, Main Tier, Level 4.1 video</td>
+</tr>
+<tr>
+<td>hvc1.2.4.L150.B0</td>
+<td>HEVC Main 10 Profile, Main Tier, Level 5.0 video</td>
+</tr>
+<tr>
+<td>mjpg</td>
+<td>JPEG image sequence</td>
+</tr>
+<tr>
+<td>mp4a.40.2</td>
+<td>AAC-LC audio</td>
+</tr>
+<tr>
+<td>mp4a.40.5</td>
+<td>HE-AAC audio</td>
+</tr>
+<tr>
+<td>mp4a.40.29</td>
+<td>HE-AACv2 audio</td>
+</tr>
+<tr>
+<td>mp4a.40.34</td>
+<td>MP3 audio</td>
+</tr>
+<tr>
+<td>mp4a.40.42</td>
+<td>xHE-AAC audio</td>
+</tr>
+<tr>
+<td>stpp.ttml.im1t</td>
+<td>IMSC1 text-only subtitles</td>
+</tr>
+<tr>
+<td>wvtt</td>
+<td>WebVTT subtitles</td>
+</tr>
+</tbody>
+</table>
+<h1><a id="fairplay%E6%B5%81%E7%9A%84allowed-cpc%E5%80%BC" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>FairPlay流的ALLOWED-CPC值</h1>
+<p>ALLOWED-CPC 属性将加密变体流的播放限制为保证一定级别的内容保护可靠性的设备。该属性将内容保护配置 （CPC） 标签列表与特定的 KEYFORMAT 值相关联。</p>
+<p>FairPlay允许的CPC标签是：</p>
+<table>
+<thead>
+<tr>
+<th>CPC标签</th>
+<th>符合该 CPC 标签的设备</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AppleBaseline</td>
+<td>任何支持 FairPlay 流媒体的 Apple 平台</td>
+</tr>
+<tr>
+<td>AppleMain</td>
+<td>任何支持 FairPlay 串流并保证增强的内容保护稳健性的 Apple 平台（足以用于工作室 4K/HDR 播放）</td>
+</tr>
+<tr>
+<td>Baseline</td>
+<td>任何支持 FairPlay 流媒体的非 Apple 平台。例如，任何支持 AirPlay 2 的智能电视。</td>
+</tr>
+<tr>
+<td>Main</td>
+<td>任何支持 FairPlay 流媒体并保证增强的内容保护稳健性（足以用于工作室 4K/HDR 播放）的非 Apple 平台</td>
+</tr>
+</tbody>
+</table>
+<p>有效属性的一个示例是：ALLOWED-CPC=“com.apple.streamingkeydelivery：AppleMain/Main”</p>
+<h1><a id="supplemental-codecs%E5%B1%9E%E6%80%A7" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>SUPPLEMENTAL-CODECS属性</h1>
+<p>某些编解码器与其他编解码器向后兼容。这些编解码器的工作原理是添加元数据，这些元数据在被解释为兼容编解码器时被忽略，但由较新的编解码器使用。这些编解码器包括杜比视界 8.4（与 HLG 兼容）和杜比视界 8.1（与 HDR10 兼容）。</p>
+<p>为了在较旧的实现上支持这些编解码器，CODECS 属性用于描述基础层。增强的编解码器在“补充-编解码器”属性中进行了描述。这允许支持 SUPPLEMENTAL-CODECS 的实现利用真正的编解码器。</p>
+<p>“补充-CODECS”属性中的每个元素都是一个以斜杠分隔的字段列表。第一个字段必须是有效的 CODECS 格式。如果存在多个字段，则其余字段必须是与该编解码器的比特流相关的兼容品牌。</p>
+<p>示例编解码器值：</p>
+<table>
+<thead>
+<tr>
+<th>编解码器</th>
+<th>编解码器属性</th>
+<th>补充属性</th>
+<th>视频范围属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dolby Vision 8.4</td>
+<td>hvc1.2.4.L153.b0</td>
+<td>dvh1.08.07/db4h</td>
+<td>HLG</td>
+</tr>
+<tr>
+<td>Dolby Vision 8.1</td>
+<td>hvc1.2.4.L150</td>
+<td>dvh1.08.06/db1p</td>
+<td>PQ</td>
+</tr>
+</tbody>
+</table>
+<p>请注意，对于杜比视界，兼容性品牌和 VIDEO-RANGE 属性充当交叉检查。省略任何一个都是不正确的。</p>
+<h1><a id="%E6%98%8F%E6%9A%97%E9%97%AA%E7%83%81%E7%9A%84%E7%81%AF%E5%85%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>昏暗闪烁的灯光</h1>
+<p>“暗淡闪烁的灯光”是一种设置（请参阅辅助功能中的新增功能），它允许用户指示他们希望避免视频中明亮、频繁的闪光。作为一项附加措施，内容制作者可以向其 HTTP 实时流内容添加标记，以识别可能引起不适的区域。</p>
+<p>可以使用标准 #EXT-X-DATERANGE 标记对区域发出信号。CLASS 属性应设置为“com.apple.accessibility.video.strobing.general-flash”。添加额外的 X 风险级别属性。风险级别应为 0 到 100 范围内的十进制浮点值，其中 0 表示最小风险，100 表示风险很大。</p>
+<p>若要避免使用大量区域，请将风险级别值限制为一小组值。对风险非常低的区域使用零风险级别。除非已分析区域，否则不要使用风险级别标记区域。原始风险值可以使用诸如VideoFlashingReduction之类的算法来计算。</p>
+<p>AVPlayerItemMetadataCollector 类可以在应用程序中用于获取 #EXT-X-DATERANGE 标记元数据。</p>
+<p>如果我们使用 AVKit 框架，则会为我们获取元数据，并且时间线会用红色标记。如果我们显示自己的时间线，则应执行类似操作。</p>
+<h1><a id="%E5%85%B6%E4%BB%96%E7%AB%8B%E4%BD%93%E5%A3%B0%E8%A7%86%E9%A2%91%E8%A7%84%E8%8C%83" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>其他立体声视频规范</h1>
+<p>视频扩展用法原子 （'vexu'） 是一个示例说明扩展，用于传达有关立体视图的可扩展信息。有关更多信息，请参阅 ISO 基本媒体文件格式和 Apple HEVC 立体声视频。</p>
+<p>我们可以将字幕或字幕的视差元数据作为 ISOBMFF（ISO 基本媒体文件格式）或 QuickTime 文件中的时标元数据轨道提供。“mebx”原子或框描述定时元数据轨道中的样本。国际标准 ISO/IEC 14496-12：2022（“信息技术 — 视听对象的编码 — 第 12 部分：ISO 基本媒体文件格式”）将此框称为 BoxedMetadataSampleEntry（有关更多信息，请参阅该文档的第 12.9 节多路复用定时元数据轨道）。QuickTime 文件格式规范将“mebx”原子称为时标元数据示例说明（请参阅时标元数据媒体）。“mebx”原子及其内容是一个通用结构。</p>
+<p>若要详细了解字幕视差信息中“mebx”的具体用法，请参阅 ISO 基本媒体文件格式和 QuickTime 影片文件格式中的 Apple HEVC 立体声视频和视频轮廓贴图有效负载元数据。</p>
+<p>有关对 MV-HEVC 视频进行编码的更多信息，请参阅 Apple HEVC 立体声视频。</p>
+<p>我们还可以在 AVFoundation 概述中找到列出的这些资源。</p>
+<h1><a id="%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E4%BA%8B%E4%BE%8B" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>播放列表事例</h1>
+<p>以下是包含杜比视界、HDR10 和 SDR 内容的播放列表示例，分辨率从 720p 到 4K。</p>
+<pre><code class="language-plain_text">#EXTM3U
+#EXT-X-VERSION:7
+#EXT-X-INDEPENDENT-SEGMENTS
+#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=2778321,BANDWIDTH=3971374,VIDEO-RANGE=SDR,CODECS=&quot;hvc1.2.4.L123.B0&quot;,RESOLUTION=1280x720,FRAME-RATE=23.976,CLOSED-CAPTIONS=NONE,HDCP-LEVEL=NONE
+sdr_720/prog_index.m3u8
+#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=6759875,BANDWIDTH=10022043,VIDEO-RANGE=SDR,CODECS=&quot;hvc1.2.4.L123.B0&quot;,RESOLUTION=1920x1080,FRAME-RATE=23.976,CLOSED-CAPTIONS=NONE,HDCP-LEVEL=TYPE-0
+sdr_1080/prog_index.m3u8
+#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=20985770,BANDWIDTH=28058971,VIDEO-RANGE=SDR,CODECS=&quot;hvc1.2.4.L150.B0&quot;,RESOLUTION=3840x2160,FRAME-RATE=23.976,CLOSED-CAPTIONS=NONE,HDCP-LEVEL=TYPE-1
+sdr_2160/prog_index.m3u8
+#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=3385450,BANDWIDTH=5327059,VIDEO-RANGE=PQ,CODECS=&quot;dvh1.05.01&quot;,RESOLUTION=1280x720,FRAME-RATE=23.976,CLOSED-CAPTIONS=NONE,HDCP-LEVEL=NONE
+dolby_720/prog_index.m3u8
+#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=7999361,BANDWIDTH=12876596,VIDEO-RANGE=PQ,CODECS=&quot;dvh1.05.03&quot;,RESOLUTION=1920x1080,FRAME-RATE=23.976,CLOSED-CAPTIONS=NONE,HDCP-LEVEL=TYPE-0
+dolby_1080/prog_index.m3u8
+#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=24975091,BANDWIDTH=30041698,VIDEO-RANGE=PQ,CODECS=&quot;dvh1.05.06&quot;,RESOLUTION=3840x2160,FRAME-RATE=23.976,CLOSED-CAPTIONS=NONE,HDCP-LEVEL=TYPE-1
+dolby_2160/prog_index.m3u8
+#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=3320040,BANDWIDTH=5280654,VIDEO-RANGE=PQ,CODECS=&quot;hvc1.2.4.L123.B0&quot;,RESOLUTION=1280x720,FRAME-RATE=23.976,CLOSED-CAPTIONS=NONE,HDCP-LEVEL=NONE
+hdr10_720/prog_index.m3u8
+#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=7964551,BANDWIDTH=12886714,VIDEO-RANGE=PQ,CODECS=&quot;hvc1.2.4.L123.B0&quot;,RESOLUTION=1920x1080,FRAME-RATE=23.976,CLOSED-CAPTIONS=NONE,HDCP-LEVEL=TYPE-0
+hdr10_1080/prog_index.m3u8
+#EXT-X-STREAM-INF:AVERAGE-BANDWIDTH=24833402,BANDWIDTH=29983769,VIDEO-RANGE=PQ,CODECS=&quot;hvc1.2.4.L150.B0&quot;,RESOLUTION=3840x2160,FRAME-RATE=23.976,CLOSED-CAPTIONS=NONE,HDCP-LEVEL=TYPE-1
+hdr10_2160/prog_index.m3u8
+#EXT-X-I-FRAME-STREAM-INF:AVERAGE-BANDWIDTH=248586,BANDWIDTH=593626,VIDEO-RANGE=SDR,CODECS=&quot;hvc1.2.4.L123.B0&quot;,RESOLUTION=1280x720,HDCP-LEVEL=NONE,URI=&quot;sdr_720/iframe_index.m3u8&quot;
+#EXT-X-I-FRAME-STREAM-INF:AVERAGE-BANDWIDTH=399790,BANDWIDTH=956552,VIDEO-RANGE=SDR,CODECS=&quot;hvc1.2.4.L123.B0&quot;,RESOLUTION=1920x1080,HDCP-LEVEL=TYPE-0,URI=&quot;sdr_1080/iframe_index.m3u8&quot;
+#EXT-X-I-FRAME-STREAM-INF:AVERAGE-BANDWIDTH=826971,BANDWIDTH=1941397,VIDEO-RANGE=SDR,CODECS=&quot;hvc1.2.4.L150.B0&quot;,RESOLUTION=3840x2160,HDCP-LEVEL=TYPE-1,URI=&quot;sdr_2160/iframe_index.m3u8&quot;
+#EXT-X-I-FRAME-STREAM-INF:AVERAGE-BANDWIDTH=232253,BANDWIDTH=573073,VIDEO-RANGE=PQ,CODECS=&quot;dvh1.05.01&quot;,RESOLUTION=1280x720,HDCP-LEVEL=NONE,URI=&quot;dolby_720/iframe_index.m3u8&quot;
+#EXT-X-I-FRAME-STREAM-INF:AVERAGE-BANDWIDTH=365337,BANDWIDTH=905037,VIDEO-RANGE=PQ,CODECS=&quot;dvh1.05.03&quot;,RESOLUTION=1920x1080,HDCP-LEVEL=TYPE-0,URI=&quot;dolby_1080/iframe_index.m3u8&quot;
+#EXT-X-I-FRAME-STREAM-INF:AVERAGE-BANDWIDTH=739114,BANDWIDTH=1893236,VIDEO-RANGE=PQ,CODECS=&quot;dvh1.05.06&quot;,RESOLUTION=3840x2160,HDCP-LEVEL=TYPE-1,URI=&quot;dolby_2160/iframe_index.m3u8&quot;
+#EXT-X-I-FRAME-STREAM-INF:AVERAGE-BANDWIDTH=232511,BANDWIDTH=572673,VIDEO-RANGE=PQ,CODECS=&quot;hvc1.2.4.L123.B0&quot;,RESOLUTION=1280x720,HDCP-LEVEL=NONE,URI=&quot;hdr10_720/iframe_index.m3u8&quot;
+#EXT-X-I-FRAME-STREAM-INF:AVERAGE-BANDWIDTH=364552,BANDWIDTH=905053,VIDEO-RANGE=PQ,CODECS=&quot;hvc1.2.4.L123.B0&quot;,RESOLUTION=1920x1080,HDCP-LEVEL=TYPE-0,URI=&quot;hdr10_1080/iframe_index.m3u8&quot;
+#EXT-X-I-FRAME-STREAM-INF:AVERAGE-BANDWIDTH=739757,BANDWIDTH=1895477,VIDEO-RANGE=PQ,CODECS=&quot;hvc1.2.4.L150.B0&quot;,RESOLUTION=3840x2160,HDCP-LEVEL=TYPE-1,URI=&quot;hdr10_2160/iframe_index.m3u8&quot;
+</code></pre>
+<p>HEVC 编解码器值在 ISO/IEC 14496-15 中进行了描述。简短的描述是 Codec.Profile.Flags.TierLevel.Constraint，因此在 hvc1.2.4.L123.B0 中，2 表示主 10 配置文件，L123 表示正常层，级别 4.1。</p>
+<p>杜比视频编解码器值在 HTTP 实时流格式 v1.1 中的杜比视界流中描述。简短描述是 Codec.Profile.Level，因此在 dvh1.05.03 中，配置文件为 5，级别为 3。</p>
+</div></body></html>
