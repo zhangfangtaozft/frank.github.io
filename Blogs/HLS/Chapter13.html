@@ -1,0 +1,909 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #ffffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%230595bf' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e2e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e8e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #bababa;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #bababa;
+}
+
+.markdown-body table th {
+  background-color: #e8e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f8f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e2e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f8f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008327;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #c0c0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #c0c0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    code,pre,pre code{
+        overflow: visible; word-wrap: break-word !important;
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script>window.MathJax = {     tex: { tags: 'ams' },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="13%E9%80%82%E7%94%A8%E4%BA%8E-apple%E8%AE%BE%E5%A4%87%E7%9A%84-http%E5%AE%9E%E6%97%B6%E6%B5%81%E5%BC%8F%E5%A4%84%E7%90%86%EF%BC%88-hls%EF%BC%89%E5%88%9B%E4%BD%9C%E8%A7%84%E8%8C%83%E4%BA%8C" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>13_适用于 Apple 设备的 HTTP 实时流式处理 （HLS） 创作规范(二)</h1>
+<h1><a id="%E9%9F%B3%E9%A2%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>音频</h1>
+<h2><a id="2%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 音频编码要求</h2>
+<p>2.1. 音频数据应以基本音频流或 fMP4 形式提供。</p>
+<p>2.2. 立体声音频格式为：</p>
+<ul>
+<li>
+<p>AAC-LC</p>
+</li>
+<li>
+<p>HE-AAC v1</p>
+</li>
+<li>
+<p>HE-AAC v2</p>
+</li>
+<li>
+<p>xHE-AAC</p>
+</li>
+<li>
+<p>Apple Lossless</p>
+</li>
+<li>
+<p>FLAC</p>
+</li>
+<li>
+<p>仅承载立体声的多声道格式</p>
+</li>
+</ul>
+<p>2.3. 必须提供 AAC、HE-AAC V1 或 HE-AAC v2 格式的立体声音频。</p>
+<p>2.4. 如果我们的音频比特率高于 64 kbit/s，则不应使用 HE-AAC。</p>
+<p>2.5. 支持的多声道音频格式包括：</p>
+<ul>
+<li>
+<p>AAC-LC</p>
+</li>
+<li>
+<p>HE-AAC v1</p>
+</li>
+<li>
+<p>Apple Lossless</p>
+</li>
+<li>
+<p>FLAC</p>
+</li>
+<li>
+<p>杜比数字 （AC-3）</p>
+</li>
+<li>
+<p>杜比数字增强 （E-AC-3）</p>
+</li>
+<li>
+<p>杜比数字增强版与杜比全景声</p>
+</li>
+</ul>
+<p>2.6. 如果提供了杜比数字增强版，并且我们的流被传送到不支持杜比数字加号的设备，则还必须提供杜比数字。请参阅音频兼容性。</p>
+<p>2.7. 立体声音频可能以多种比特率提供。</p>
+<p>2.8. * 使用特定编解码器的多声道音频可能以多种比特率提供。</p>
+<p>2.9. 总体比特率建议如下：</p>
+<table>
+<thead>
+<tr>
+<th>音频轨道</th>
+<th>格式</th>
+<th>总计（千比特/秒）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.0 (stereo)</td>
+<td>AAC</td>
+<td>32 to 160</td>
+</tr>
+<tr>
+<td>2.0 (stereo)</td>
+<td>xHE-AAC</td>
+<td>24 to 160</td>
+</tr>
+<tr>
+<td>2.0 (stereo)</td>
+<td>Dolby Digital Plus</td>
+<td>96 to 160</td>
+</tr>
+<tr>
+<td>5.1 (surround)</td>
+<td>AAC</td>
+<td>320</td>
+</tr>
+<tr>
+<td>5.1 (surround)</td>
+<td>Dolby Digital</td>
+<td>384</td>
+</tr>
+<tr>
+<td>5.1 (surround)</td>
+<td>Dolby Digital Plus</td>
+<td>192</td>
+</tr>
+<tr>
+<td>7.1 (surround)</td>
+<td>Dolby Digital Plus</td>
+<td>384</td>
+</tr>
+<tr>
+<td>Nominally 16</td>
+<td>Dolby Digital Plus with Dolby Atmos</td>
+<td>384 to 768</td>
+</tr>
+</tbody>
+</table>
+<p>2.10. * 我们可以在流中更改频道布局。</p>
+<p>2.11. 频道布局更改必须与 EXT-X-DISCONTINUITY 标签结合使用。</p>
+<p>2.12. 如果我们提供描述性视频服务（DVS），也称为“音频描述”，则必须使用属性FEATURES=“public.accessibility.describes-video”进行标记。</p>
+<p>2.13. 如果我们提供 DVS，则自动选择属性的值必须为“是”。</p>
+<p>2.14. DVS 音频的名称应表明该流是 DVS 内容。</p>
+<p>2.15. 如果我们提供替代音频或 DVS，则必须在整个内容持续时间内提供它，即使它实际上只存在于部分主要内容中。</p>
+<p>2.16. 当替代内容不可用时，替代音频或 DVS 可能会重复使用常规内容的音频片段。</p>
+<p>2.17. 单个媒体段不得包含多个音频流。</p>
+<p>2.18. 响度管理或动态范围控制应存在，除非所有内容（包括广告）都以相同的音频电平编码。</p>
+<p>2.19. 在 fMP4 文件中，我们应该通过响度盒（“ludt”）提供响度信息。如果存在，响度框优先于音频流中的任何响度信息。</p>
+<p>2.20. 在没有响度盒的情况下，杜比数字和杜比数字增强响度应由对白归一律字段指定 （ATSC A/52：2012）。</p>
+<p>2.21. 对于 AAC，在没有响度框的情况下，AAC 对话响度应由 AAC prog_ref_level（ISO 14496-3 子条款 4.5.2.7）指定，如 SCTE 193-1 第 7.4.1 节指定，或由 ISO 23003-4 指定的响度Info（） 有效载荷指定，在这种情况下，必须存在采样峰值电平或真峰值电平，测量系统必须为 2， 和方法定义必须是 1 或 2，而对于视频内容，它应该是 2。</p>
+<p>2.22. 对于 xHE-AAC，必须根据 ISO 23003-4 表 I.5 中指定的基本响度元数据存在响度元数据;samplePeakLevel 或 truePeakLevel 必须存在。对于视频内容，方法定义应为 2。</p>
+<p>2.23. 响度值必须表示内容的实际响度。</p>
+<p>2.24. fMP4 文件中的 HE-AAC 必须使用 SBR 数据的显式信令。</p>
+<p>2.25. xHE-AAC、Apple 无损和 FLAC 音频的容器格式必须是 fMP4。</p>
+<p>2.26. 如果我们提供非杜比多声道音频，则还应提供多声道 AAC。</p>
+<p>2.27. 对于音频描述，必须存在 LANGUAGE 属性，并指示用于传达描述的主要语言。</p>
+<p>2.28. 为提高语音清晰度而准备或以其他方式处理的音频可以标记为属性 FEATURES=“public.accessibility.enhances-speech-intelligability”。</p>
+<h1><a id="%E5%B9%BF%E5%91%8A%E5%92%8C%E5%89%8D%E4%B8%AD%E5%90%8E%E8%B4%B4%E7%89%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>广告和前/中/后贴片</h1>
+<p>3.广告要求（另请参阅 Apple 设备的 HTTP 直播 （HLS） 创作规范的媒体播放列表部分。</p>
+<p>3.1. 我们的广告和其他插入的媒体应包含在媒体播放列表中。</p>
+<p>3.2. 插入的媒体应使用与媒体播放列表中其他内容相同的编解码器进行编码。</p>
+<p>3.3. 插入的媒体应使用与媒体播放列表中其他内容相同的纵横比进行编码。</p>
+<p>3.4. 插入的介质应等于或低于该变体的指定带宽。</p>
+<h1><a id="%E8%BE%85%E5%8A%A9%E5%8A%9F%E8%83%BD" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>辅助功能</h1>
+<p>4.无障碍要求</p>
+<p>4.1. 我们的直播应提供字幕，以使失聪或听力障碍者可以访问内容。</p>
+<p>4.2. 支持的字幕格式包括：</p>
+<p>CEA-608 隐藏式字幕</p>
+<p>CEA-708 隐藏式字幕</p>
+<p>网络VTT字幕</p>
+<p>IMSC1 字幕（仅限文本配置文件）</p>
+<p>4.3. 隐藏式字幕（如果有）必须包含在视频媒体片段中。</p>
+<p>4.4. 隐藏式字幕的存在必须通过包含语言属性的 EXT-X-MEDIA 标签声明。</p>
+<p>4.5. 如果字幕轨道旨在为失聪或有听力障碍的人提供可访问性，则必须使用属性 FEATURES=“public.accessibility.transcribes-spoken-dialog，public.accessibility.describes-music-and-sound”标记。（具有此属性值的字幕与隐藏式字幕的处理方式相同。</p>
+<p>4.6. 如果字幕轨道旨在为失聪或有听力障碍的人提供可访问性，则自动选择属性的值必须为“是”。</p>
+<p>4.7. 语言属性必须包含在字幕轨道的 EXT-X-MEDIA 标签中。</p>
+<p>4.8. 有关在直播中包含音频描述的信息，请参阅第 2.12 至 2.16 项。</p>
+<h1><a id="%E5%AD%97%E5%B9%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>字幕</h1>
+<p>5.字幕要求</p>
+<p>5.1. 可能会提供字幕。</p>
+<p>5.2. * 字幕必须是 WebVTT（根据 HLS 规范）或 IMSC1 在 fMP4 中。</p>
+<p>5.3. WebVTT 字幕必须采用文本文件，并按照 HLS 规范使用 X-TIMESTAMP-MAP。</p>
+<p>5.4. IMSC1 字幕必须采用 fMP4 文件。</p>
+<p>5.5. 字幕播放列表必须存在于整个主要内容中，即使实际字幕仅存在于部分内容中。</p>
+<p>5.6. 对于实时（线性）内容，字幕播放列表的目标时长必须与其他媒体相同。</p>
+<p>5.7. 对于 VOD 内容，字幕播放列表的目标持续时间可能比其他媒体长。</p>
+<p>5.8. 如果内容具有给定语言的强制字幕和常规字幕，则该语言的常规字幕轨道必须同时包含该语言的强制字幕和常规字幕。</p>
+<p>5.9. 如果我们的视频包含刻录到视频中的文本，并且我们可以访问没有烧入的版本，则应改用强制字幕。（这使我们可以轻松地翻译成多种语言。使用强制字幕的一个例子是科幻电影，其中外星语言被翻译成英语。</p>
+<p>5.10. 字幕的类型应在相关 EXT-X-STREAM-INF 标签的 CODECS 属性中指定。我们应该使用“stpp.ttml.im1t”来识别IMSC1字幕。我们可以使用“wvtt”来识别WebVTT字幕。</p>
+<p>5.11. 强制字幕应始终具有AUTOSELECT=YES。</p>
+</div></body></html>

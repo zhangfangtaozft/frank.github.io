@@ -1,0 +1,815 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>/* copy from https://github.com/sindresorhus/github-markdown-css/ */
+
+html,body{background-color: #ffffff;}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  color: #333333;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body figure{margin:0;padding:0; display:table;}
+.markdown-body figure figcaption{font-size:92%; text-align:center; color:#09844f;}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #0595bf;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1:hover .anchor .octicon-link:before,
+.markdown-body h2:hover .anchor .octicon-link:before,
+.markdown-body h3:hover .anchor .octicon-link:before,
+.markdown-body h4:hover .anchor .octicon-link:before,
+.markdown-body h5:hover .anchor .octicon-link:before,
+.markdown-body h6:hover .anchor .octicon-link:before {
+  width: 16px;
+  height: 16px;
+  content: ' ';
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' fill='%230595bf' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: initial;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+.markdown-body strong{
+  color: #333333;
+}
+.markdown-body em{
+  color: #333333;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: initial;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366dd;
+  text-decoration: none;
+}
+.markdown-body mjx-container[jax="SVG"] > svg a{fill:#0366dd;stroke: #0366dd;}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr:after,
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 12px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  line-height: 12px;
+  color: #09844f;
+  vertical-align: middle;
+  background-color: #f8f8f8;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.markdown-body:after,
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  clear: both;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: .25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #e2e2e2;
+  border: 0;
+}
+
+.markdown-body blockquote {
+  padding: 0 1em;
+  color: #636363;
+  border-left: .25em solid #bbbbbb;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #e8e8e8;
+  color: #0595bf;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+  color: #0595bf;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #0595bf;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+  color: #0595bf;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+  color: #0595bf;
+}
+
+.markdown-body h6 {
+  font-size: .85em;
+  color: #0595bf;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  padding: 6px 13px;
+  border: 1px solid #bababa;
+}
+
+.markdown-body table tr {
+  background-color: #ffffff;
+  border-top: 1px solid #bababa;
+}
+
+.markdown-body table th {
+  background-color: #e8e8e8;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f9f9f9;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: initial;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: #f8f8f8;
+  color: #09844f;
+  border-radius: 3px;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+   font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  color: #09844f;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+.markdown-body section.footnotes{
+    margin-top:48px;
+    border-top:solid 1px #e2e2e2;
+    padding-top:0px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-body mark{color: #111;}
+}
+
+/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background-color: #f8f8f8;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #008327;
+}
+
+.token.punctuation {
+    color: #2834ce;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #2834ce;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #d32d26;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #$$codeBlockColor$$;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #bc319c;
+}
+
+.token.function,
+.token.class-name {
+    color: #967d41;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #784830;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #c0c0c0;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+  .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+  }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #c0c0c0;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+
+
+</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    code,pre,pre code{
+        overflow: visible; word-wrap: break-word !important;
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script>window.MathJax = {     tex: { tags: 'ams' },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="16%E9%80%82%E7%94%A8%E4%BA%8E-apple%E8%AE%BE%E5%A4%87%E7%9A%84-http%E5%AE%9E%E6%97%B6%E6%B5%81%E5%BC%8F%E5%A4%84%E7%90%86%EF%BC%88-hls%EF%BC%89%E5%88%9B%E4%BD%9C%E8%A7%84%E8%8C%83%E4%BA%94" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>16_适用于 Apple 设备的 HTTP 实时流式处理 （HLS） 创作规范(五)</h1>
+<h1><a id="%E7%AB%8B%E4%BD%93%E5%A3%B0%E8%A7%86%E9%A2%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>立体声视频</h1>
+<h2><a id="16%E7%AB%8B%E4%BD%93%E5%A3%B0%E8%A7%86%E9%A2%91%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>16. 立体声视频要求</h2>
+<p>16.1. 立体声视频内容必须包含视频扩展使用（“vexu”）原子/框。（请参阅其他立体声视频规格。</p>
+<p>16.2. 如果我们的内容有字幕，立体声视频内容应包含视差元数据。（请参阅其他立体声视频规格。</p>
+<p>16.3. 所有包含立体视频内容的变体都必须标有 REQ-VIDEO-LAYOUT 属性。</p>
+<p>16.4. 立体视频和单视场视频内容之间的切换必须标有 EXT-X-DISCONTINUITY 标签，或者媒体初始化部分必须包含这两种内容的示例描述。在后一种情况下，每个样本的样本索引字段应指向相应的样本描述。</p>
+<p>16.5. 如果立体视频内容包含单视场视频内容的各个部分，则 REQ-VIDEO-LAYOUT 属性必须包含“CH-MONO”作为条目。</p>
+<p>16.6. 立体声视频内容应包括多声道音频。</p>
+<p>16.7. 立体声视频必须使用 MV-HEVC 进行编码。</p>
+<h1><a id="%E4%BF%AE%E8%AE%A2%E4%BA%86tvos%E7%9A%84%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>修订了tvOS的要求</h1>
+<p>所有一般规则均适用，除非本节中具有相同编号的规则明确修改。带有前导加号 （+） 的规则是附加规则。</p>
+<h1><a id="%E8%A7%86%E9%A2%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>视频</h1>
+<h2><a id="1%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 视频编码要求</h2>
+<p>1.3.</p>
+<p>1.3b. H.264 的配置文件和级别必须小于或等于高配置文件，级别 5.1。</p>
+<p>1.20. 对于 HDR 内容，必须提供小于或等于 30 fps 的帧速率。</p>
+<p>1.25. 不应提供 145 kbit/s 变体。</p>
+<h1><a id="%E9%9F%B3%E9%A2%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>音频</h1>
+<h2><a id="2%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 音频编码要求</h2>
+<p>2.8. 使用特定编解码器的多声道音频可以以多种比特率提供。但是，杜比全景声（Dolby Atmos）内容应限制为单个比特率。</p>
+<h1><a id="trick%E6%92%AD%E6%94%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trick播放</h1>
+<h2><a id="6-trick%E6%92%AD%E6%94%BE%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>6.Trick播放要求</h2>
+<p>6.16. 必须提供 SDR 特技播放流。</p>
+<h1><a id="%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>媒体播放列表</h1>
+<h2><a id="8%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>8. 媒体播放列表要求</h2>
+<p>8.12. 我们应该在实时（线性）播放列表中提供至少 120 分钟的内容。</p>
+<h1><a id="%E5%A4%9A%E5%8F%98%E9%87%8F%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>多变量播放列表</h1>
+<h2><a id="9%E5%A4%9A%E5%8F%98%E9%87%8F%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>9. 多变量播放列表要求</h2>
+<p>9.20. + 多变量播放列表中不得列出纯音频变体。</p>
+<h1><a id="%E4%BF%AE%E6%94%B9%E4%BA%86macos%E7%9A%84%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>修改了 macOS的要求</h1>
+<p>所有一般规则均适用，除非本节中具有相同编号的规则明确修改。带有前导加号 （+） 的规则是附加规则。</p>
+<h1><a id="%E8%A7%86%E9%A2%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>视频</h1>
+<p>##1. 视频编码要求</p>
+<p>1.3.</p>
+<p>1.3b. H.264 的配置文件和级别必须小于或等于高配置文件，级别 5.0。</p>
+<p>修订了启用“隔空播放 2”的电视页面链接的要求<br />
+所有一般规则均适用，除非本节中具有相同编号的规则明确修改。带有前导加号 （+） 的规则是附加规则。</p>
+<blockquote>
+<p>注意</p>
+<p>旧版第三方电视上的“隔空播放”不支持加密内容的“样本组描述框”（“sgpd”）和“样本到组”框（“sbgp”）。必须从加密的 CMAF 内容中删除它们才能启用播放。</p>
+</blockquote>
+<h1><a id="%E8%A7%86%E9%A2%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>视频</h1>
+<h2><a id="1%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 视频编码要求</h2>
+<p>1.23. 如果提供多个视频流（H.264、HEVC、HDR），则每个流必须提供所有预期的带宽。</p>
+<p>1.36. + 加密的 fMP4 内容必须包含一个示例加密框 （“senc”），或同时包含示例辅助信息大小框 （“saiz”） 和一个示例辅助信息偏移框 （“saio”）。</p>
+<h1><a id="%E9%9F%B3%E9%A2%91" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>音频</h1>
+<h2><a id="2%E9%9F%B3%E9%A2%91%E7%BC%96%E7%A0%81%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 音频编码要求</h2>
+<p>2.10. 频道布局不应在流中更改。</p>
+<h1><a id="%E5%B9%BF%E5%91%8A%E5%92%8C%E5%89%8D%E4%B8%AD%E5%90%8E%E8%B4%B4%E7%89%87" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>广告和前/中/后贴片</h1>
+<h2><a id="3%E5%B9%BF%E5%91%8A%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. 广告要求</h2>
+<p>3.5. + 插入的媒体应具有与媒体播放列表中其他内容相似的帧速率（x、2x、x/2）。</p>
+<h1><a id="%E5%AD%97%E5%B9%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>字幕</h1>
+<h2><a id="5%E5%AD%97%E5%B9%95%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. 字幕要求</h2>
+<p>5.2. 字幕必须是网络VTT。</p>
+<h1><a id="trick%E6%92%AD%E6%94%BE" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trick播放</h1>
+<h2><a id="6-trick%E6%92%AD%E6%94%BE%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Trick播放要求</h2>
+<p>6.13. 如果普通视频变体使用视频编解码器，则必须存在一个或多个具有相同视频编解码器或 mjpg 编解码器的 I 帧变体。</p>
+<h1><a id="%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>媒体播放列表</h1>
+<h2><a id="8%E5%AA%92%E4%BD%93%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>8. 媒体播放列表要求</h2>
+<p>8.16. 我们不应在不连续时切换编解码器。例如，不要在 HEVC 和 H.264 之间切换，也不要在 AAC 和杜比数字之间切换。</p>
+<p>8.22. 所有视频变体和演绎版必须在同一时间点具有分段边界。</p>
+<p>8.25. + 不连续时的帧速率变化应使用类似的帧速率（x、2x、x/2）。</p>
+<h1><a id="%E5%A4%9A%E5%8F%98%E9%87%8F%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>多变量播放列表</h1>
+<h2><a id="9%E5%A4%9A%E5%8F%98%E9%87%8F%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E8%A6%81%E6%B1%82" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>9. 多变量播放列表要求</h2>
+<p>9.23. + 我们应该为每种编解码器类型和帧速率提供全方位的变体。相似的帧速率（x、2x、x/2）是兼容的，不相似的帧速率可能会导致播放问题。</p>
+<p>9.24. + 如果我们提供 HDR 内容，则应同时提供杜比视界和 HDR10。</p>
+</div></body></html>
